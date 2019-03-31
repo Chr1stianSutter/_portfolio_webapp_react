@@ -3,7 +3,7 @@ import { HashRouter, Route } from 'react-router-dom';
 import NavigationBarPortfolio from "../components/NavigationBarPortfolio"
 import BgImageMe from "../components/BgImageMe";
 import Background from "../res/bg.jpg";
-
+import Logo from "../res/logo.jpg";
 //about me
 import MobxInteraction from "../pages/MobxInteraction"
 
@@ -60,6 +60,7 @@ export default class Layout extends React.Component {
                     <div class="container" style={containerStyle}>
                         <div class="row">
                             <div class="col-xs-12">
+                                
                                 <Route exact path="/aboutme" component={MobxInteraction}/>
                                 <Route exact path="/projects" component={TextFromRestCall}/>
                                 <Route exact path="/cv" component={Cars}/>
