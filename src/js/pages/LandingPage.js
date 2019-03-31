@@ -40,6 +40,17 @@ export default class Layout extends React.Component {
         const containerStyle = {
             marginTop: "5px"
         };
+        const backgroundStyle = {
+          //backgroundImage: path("../res/bg.jpg"),
+          height: "100%",
+          //width: "100%",
+          position: "fixed",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover"
+        };
+
+
 
         return (
             <HashRouter>
@@ -56,7 +67,9 @@ export default class Layout extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <img src= {Background}/>
+
+                    <img src= {Background} style={backgroundStyle}/>
+
                 </div>
             </HashRouter>
         );
