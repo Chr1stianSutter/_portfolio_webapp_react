@@ -1,6 +1,8 @@
 import React from "react";
 import { HashRouter, Route } from 'react-router-dom';
 import NavigationBarPortfolio from "../components/NavigationBarPortfolio"
+import BgImageMe from "../components/BgImageMe";
+import Background from "../res/bg.jpg";
 
 //about me
 import MobxInteraction from "../pages/MobxInteraction"
@@ -42,6 +44,7 @@ export default class Layout extends React.Component {
         return (
             <HashRouter>
                 <div>
+
                     <NavigationBarPortfolio location={location}/>
                     <div class="container" style={containerStyle}>
                         <div class="row">
@@ -53,6 +56,7 @@ export default class Layout extends React.Component {
                             </div>
                         </div>
                     </div>
+                    <img src= {Background}/>
                 </div>
             </HashRouter>
         );
