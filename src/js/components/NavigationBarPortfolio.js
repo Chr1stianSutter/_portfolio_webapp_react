@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Menu } from 'semantic-ui-react'
 import { Link } from "react-router-dom";
+import Logo from "../res/logo.jpg";
 
 export default class MenuExampleBasic extends Component {
 
@@ -14,13 +15,33 @@ export default class MenuExampleBasic extends Component {
   render() {
     const { activeItem } = this.state
 
+    const logoStyle = {
+      height: "80px",
+      width: "80px "
+    };
+
+    const menuStyle = {
+      paddingLeft: "100px",
+      paddingRight: "100px",
+      textAlign: 'center'
+    };
+
     return (
       <Menu>
+        <Menu.Item
+          as={Link} to='/home'
+          name='Home'
+          active={activeItem === 'Home'}
+          onClick={this.handleItemClick}>
+          <img src= {Logo} style={logoStyle}/>
+        </Menu.Item>
+
         <Menu.Item
           as={Link} to='/aboutme'
           name='AboutMe'
           active={activeItem === 'MenuAboutMe'}
-          onClick={this.handleItemClick}>
+          onClick={this.handleItemClick}
+          style={menuStyle}>
           ABOUT ME
         </Menu.Item>
 
@@ -28,7 +49,8 @@ export default class MenuExampleBasic extends Component {
            as={Link} to='/projects'
            name='Projects'
            active={activeItem === 'MenuProjects'}
-           onClick={this.handleItemClick}>
+           onClick={this.handleItemClick}
+           style={menuStyle}>
           PROJECTS
         </Menu.Item>
 
@@ -36,7 +58,8 @@ export default class MenuExampleBasic extends Component {
            as={Link} to='/cv'
            name='Cv'
            active={activeItem === 'MenuCv'}
-           onClick={this.handleItemClick}>
+           onClick={this.handleItemClick}
+           style={menuStyle}>
           CV
         </Menu.Item>
 
@@ -44,7 +67,8 @@ export default class MenuExampleBasic extends Component {
          as={Link} to='/contact'
          name='Contact'
          active={activeItem === 'MenuContact'}
-         onClick={this.handleItemClick}>
+         onClick={this.handleItemClick}
+         style={menuStyle}>
         CONTACT
       </Menu.Item>
     </Menu>

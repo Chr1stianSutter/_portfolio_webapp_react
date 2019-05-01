@@ -4,6 +4,10 @@ import NavigationBarPortfolio from "../components/NavigationBarPortfolio"
 import BgImageMe from "../components/BgImageMe";
 import Background from "../res/bg.jpg";
 import Logo from "../res/logo.jpg";
+
+//home
+import LandingPage from "../pages/LandingPage";
+
 //about me
 import MobxInteraction from "../pages/MobxInteraction"
 
@@ -50,8 +54,6 @@ export default class Layout extends React.Component {
           backgroundSize: "cover"
         };
 
-
-
         return (
             <HashRouter>
                 <div>
@@ -59,8 +61,9 @@ export default class Layout extends React.Component {
                     <NavigationBarPortfolio location={location}/>
                     <div class="container" style={containerStyle}>
                         <div class="row">
-                            <div class="col-xs-12">
-                                
+                            <div class="col-xs-12" >
+
+                                <Route exact path="/home" component={LandingPage}/>
                                 <Route exact path="/aboutme" component={MobxInteraction}/>
                                 <Route exact path="/projects" component={TextFromRestCall}/>
                                 <Route exact path="/cv" component={Cars}/>
