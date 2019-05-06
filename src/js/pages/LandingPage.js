@@ -54,6 +54,24 @@ export default class Layout extends React.Component {
           backgroundSize: "cover"
         };
 
+        const textStyle = {
+          position: 'absolute',
+          marginLeft:"35%",
+          marginTop:"5%",
+
+        };
+
+        const myNameStyle={
+          fontSize:"70pt",
+          fontFamily: 'Montserrat',
+          textTransform:"uppercase",
+          lineHeight:"0.9em"
+        };
+
+        const smallTextStyle ={
+          fontFamily: 'Montserrat'
+        }
+
         return (
             <HashRouter>
                 <div>
@@ -73,6 +91,13 @@ export default class Layout extends React.Component {
                     </div>
 
                     <img src= {Background} style={backgroundStyle}/>
+
+                    <div style={textStyle}>
+                     <h2 style={smallTextStyle} >Hello I'm</h2>
+                     <h1 style={myNameStyle}> Christian<br/>Sutter</h1>
+                     <h2 style={smallTextStyle}> I'm a DIGITAL DESIGNER with<br/>a focus on UI and USABILITY</h2>
+
+                   </div>
 
                 </div>
             </HashRouter>
