@@ -38,7 +38,7 @@ export default class MenuExampleBasic extends Component {
     return (
       <Menu class="ui secondary pointing menu">
         <Menu.Item
-          as={Link} to='/#'
+          as={Link} to='/home'
           name='Home'
           class='active item'
           active={activeItem === 'Home'}
