@@ -6,7 +6,7 @@ import Background from "../res/bg.jpg";
 import Logo from "../res/logo.jpg";
 
 //home
-import LandingPage2 from "../pages/LandingPage2";
+import LandingPage from "../pages/LandingPage";
 
 //about me
 import MobxInteraction from "../pages/MobxInteraction"
@@ -82,16 +82,15 @@ export default class Layout extends React.Component {
         }
 
         return (
-          
             <HashRouter>
-                  <div>
+                <div>
 
                     <NavigationBarPortfolio location={location}/>
                     <div class="container" style={containerStyle}>
                         <div class="row">
                             <div class="col-xs-12" >
 
-                                <Route exact path="/home" component={LandingPage2}/>
+                                <Route exact path="/home" component={LandingPage}/>
                                 <Route exact path="/aboutme" component={MobxInteraction}/>
                                 <Route exact path="/projects" component={TextFromRestCall}/>
                                 <Route exact path="/cv" component={Cars}/>
@@ -99,10 +98,21 @@ export default class Layout extends React.Component {
                             </div>
                         </div>
                     </div>
-                  </div>
+
+                    <img src= {Background} style={backgroundStyle}/>
+
+                    <div style={textStyle}>
+                     <h2 style={smallTextStyle} >Hello I'm</h2>
+                     <h1 style={myNameStyle}> Christian<br/>Sutter</h1>
+                     <div style={divBarStyle}>
+
+                     </div>
+                     <h2 style={smallTextStyle}> I'm a DIGITAL DESIGNER with<br/>a focus on UI and USABILITY</h2>
+
+                   </div>
+
+                </div>
             </HashRouter>
-
-
         );
     }
 }
