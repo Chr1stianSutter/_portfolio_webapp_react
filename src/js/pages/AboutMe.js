@@ -1,13 +1,18 @@
 import React from "react";
 import { Grid } from 'semantic-ui-react'
+import Blackground from "../res/black3.jpg";
 
 export default class AboutMe extends React.Component {
   render() {
+    const background ={
+      backgroundColor:'black'
+    };
 
     const textStyle = {
       position: 'absolute',
       marginLeft:"12%",
       marginTop:"5%",
+      color:"white"
 
     };
 
@@ -15,6 +20,7 @@ export default class AboutMe extends React.Component {
       position: 'absolute',
       marginLeft:"12%",
       marginTop:"15%",
+      color: "white"
 
     };
 
@@ -35,19 +41,30 @@ export default class AboutMe extends React.Component {
       width:"150px",
       marginTop: "30px",
       marginBottom:"25px",
-      backgroundColor:'black'
+      backgroundColor:'white'
     }
     const divBarStyle2 = {
       height:"10px",
       width:"310px",
       marginTop: "0px",
       marginBottom:"25px",
-      backgroundColor:'black'
-    }
+      backgroundColor:'white'
+
+    };
+      const backgroundStyle = {
+        //backgroundImage: path("../res/bg.jpg"),
+        height: "100%",
+        width: "100%",
+        position: "fixed",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover"
+      };
 
     return (
 
-      <div >
+      <div style={background}>
+        <img src= {Blackground} style={backgroundStyle}/>
         <Grid>
           <Grid.Row>
           <div style={textStyle}>
