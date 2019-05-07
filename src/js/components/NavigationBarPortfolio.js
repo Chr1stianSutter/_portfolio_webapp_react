@@ -36,7 +36,8 @@ export default class MenuExampleBasic extends Component {
     };
 
     return (
-      <Menu class="ui secondary pointing menu">
+      <div class="ui inverted segment">
+      <Menu class="ui inverted secondary pointing menu">
         <Menu.Item
           as={Link} to='/'
           name='Home'
@@ -100,6 +101,7 @@ export default class MenuExampleBasic extends Component {
           </Menu.Item>
 
     </Menu>
+    </div>
     )
   }
 }
