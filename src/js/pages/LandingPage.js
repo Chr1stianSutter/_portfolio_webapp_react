@@ -19,7 +19,7 @@ import Projects from "../pages/Projects"
 import CV from "../pages/CV"
 
 //contact me
-import TableTest from "../pages/TableTest"
+import Contact from "../pages/Contact"
 
 
 import { observer } from "mobx-react";
@@ -59,7 +59,7 @@ export default class Layout extends React.Component {
                                 <Route exact path="/aboutme" component={AboutMe}/>
                                 <Route exact path="/projects" component={Projects}/>
                                 <Route exact path="/cv" component={CV}/>
-                                <Route exact path="/contact" component={TableTest}/>
+                                <Route exact path="/contact" component={Contact}/>
                             </div>
                         </div>
 
