@@ -1,13 +1,27 @@
 import React from "react";
 import { Grid } from 'semantic-ui-react'
+import { Card } from 'semantic-ui-react'
+import ProjectCards from '../components/ProjectCards'
+import image from '../res/image.jpg';
+
 
 export default class Projects extends React.Component {
   render() {
+
+
 
     const textStyle = {
       position: 'absolute',
       marginLeft:"12%",
       marginTop:"5%",
+
+
+    };
+
+    const cardStyle = {
+      position: 'absolute',
+      marginLeft:"12%",
+      marginTop:"15%",
 
     };
 
@@ -49,8 +63,26 @@ export default class Projects extends React.Component {
             <div style={divBarStyle}></div>
           </div>
           </Grid.Row>
+          <Grid.Row>
+            <div style={cardStyle}>
+              <div class="ui five cards">
+                <div class="ui raised card">
+                  <div class="image"><img src={image} /></div>
+                </div>
+                <div class="ui raised card">
+                  <div class="image"><img src={image} /></div>
+                </div>
+                <div class="ui raised card">
+                  <div class="image"><img src={image} /></div>
+                </div>
+                <div class="ui raised card">
+                  <div class="image"><img src={image} /></div>
+                </div>
+              </div>
+            </div>
+          </Grid.Row>
 
-      </Grid>
+        </Grid>
       </div>
     );
   }
