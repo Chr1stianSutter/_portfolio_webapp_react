@@ -13,7 +13,7 @@ export default class AboutMe extends React.Component {
 
     const textStyleGrid = {
       position: 'absolute',
-      marginLeft:"24%",
+      marginLeft:"12%",
       marginTop:"15%",
 
     };
@@ -47,7 +47,7 @@ export default class AboutMe extends React.Component {
 
     return (
 
-      <div style={textStyle}>
+      <div >
         <Grid>
           <Grid.Row>
           <div style={textStyle}>
@@ -56,17 +56,17 @@ export default class AboutMe extends React.Component {
             <div style={divBarStyle}></div>
           </div>
           </Grid.Row>
-        <Grid.Row>
-        <Grid.Column width={4}>
-          <div style={textStyle}>
+        <Grid.Row style={textStyleGrid}>
+        <Grid.Column width={5}>
+          <div >
             <h2 style={smallTextStyle}> Hi! I'm a graduate from the<br/>University of Applied Sciences<br/>Weingarten.</h2>
             <h2 style={smallTextStyle}> My major was DMD or digital<br/>media design, you can check them<br/>out here:</h2>
             <h2 style ={smallTextStyle}> digitalmediadesign.io</h2>
             <div style={divBarStyle2}></div>
           </div>
         </Grid.Column>
-        <Grid.Column width={4}>
-        <div style={textStyle}>
+        <Grid.Column width={5}>
+        <div>
 
           <h2 style={smallTextStyle}> I have a passion for digital<br/>interfaces, user-centered design,<br/>bold fonts, and lots of whitespace.</h2>
           <h2 style={smallTextStyle}> A problem-solver at heart, with a<br/>love for all things usability.</h2>
