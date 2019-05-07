@@ -3,6 +3,7 @@ import ReactDOM from "react-dom"
 
 import Layout from "./pages/LandingPage"
 
+
 // Integration von Semantic UI
 //
 // 1. Schritt Auf der Kommandozeile.

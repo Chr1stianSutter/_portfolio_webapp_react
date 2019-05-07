@@ -8,7 +8,7 @@ export default class MenuExampleBasic extends Component {
 
   constructor() {
     super();
-    this.state = { activeItem : "Home" }
+    this.state = { activeItem : 'Home' }
   }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
@@ -38,7 +38,7 @@ export default class MenuExampleBasic extends Component {
     return (
       <Menu class="ui secondary pointing menu">
         <Menu.Item
-          as={Link} to='/#'
+          as={Link} to='/'
           name='Home'
           class='active item'
           active={activeItem === 'Home'}

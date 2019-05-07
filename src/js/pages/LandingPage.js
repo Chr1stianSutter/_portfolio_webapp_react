@@ -5,8 +5,9 @@ import BgImageMe from "../components/BgImageMe";
 import Background from "../res/bg.jpg";
 import Logo from "../res/logo.jpg";
 
-//home
 import LandingPage from "../pages/LandingPage";
+//home
+import LandingPage2 from "../pages/LandingPage2";
 
 //about me
 import MobxInteraction from "../pages/MobxInteraction"
@@ -44,75 +45,28 @@ export default class Layout extends React.Component {
         const containerStyle = {
             marginTop: "5px"
         };
-        const backgroundStyle = {
-          //backgroundImage: path("../res/bg.jpg"),
-          height: "100%",
-          //width: "100%",
-          position: "fixed",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover"
-        };
-
-        const textStyle = {
-          position: 'absolute',
-          marginLeft:"35%",
-          marginTop:"5%",
-
-        };
-
-        const myNameStyle={
-          fontSize:"90pt",
-          fontFamily: 'Montserrat',
-          textTransform:"uppercase",
-          lineHeight:"0.9em"
-        };
-
-        const smallTextStyle ={
-          fontFamily: 'Montserrat',
-          fontSize:"25pt"
-        };
-
-        const divBarStyle = {
-          height:"10px",
-          width:"150px",
-          marginTop: "30px",
-          marginBottom:"25px",
-          backgroundColor:'black'
-        }
 
         return (
-            <HashRouter>
-                <div>
 
+            <HashRouter>
+                  <div>
                     <NavigationBarPortfolio location={location}/>
                     <div class="container" style={containerStyle}>
                         <div class="row">
                             <div class="col-xs-12" >
 
-                                <Route exact path="/home" component={LandingPage}/>
+                                <Route exact path="/" component={LandingPage2}/>
                                 <Route exact path="/aboutme" component={MobxInteraction}/>
                                 <Route exact path="/projects" component={TextFromRestCall}/>
                                 <Route exact path="/cv" component={Cars}/>
                                 <Route exact path="/contact" component={TableTest}/>
                             </div>
                         </div>
+
                     </div>
+                  </div>
+          </HashRouter>
 
-                    <img src= {Background} style={backgroundStyle}/>
-
-                    <div style={textStyle}>
-                     <h2 style={smallTextStyle} >Hello I'm</h2>
-                     <h1 style={myNameStyle}> Christian<br/>Sutter</h1>
-                     <div style={divBarStyle}>
-
-                     </div>
-                     <h2 style={smallTextStyle}> I'm a DIGITAL DESIGNER with<br/>a focus on UI and USABILITY</h2>
-
-                   </div>
-
-                </div>
-            </HashRouter>
         );
     }
 }
