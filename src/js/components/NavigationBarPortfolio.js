@@ -13,6 +13,10 @@ export default class MenuExampleBasic extends Component {
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
+  //$('.ui .item').on('click', function() {
+  //$('.ui .item').removeClass('active');
+  //$(this).addClass('active');
+  //});
 
   render() {
     const { activeItem } = this.state
@@ -25,59 +29,76 @@ export default class MenuExampleBasic extends Component {
     const menuStyle = {
       paddingLeft: "100px",
       paddingRight: "100px",
+      paddingBottom: "40px",
       textAlign: 'center',
       fontFamily: 'Montserrat',
       fontSize: '20px'
     };
 
     return (
-      <Menu>
+      <Menu class="ui secondary pointing menu">
         <Menu.Item
-          as={Link} to='/home'
+          as={Link} to='/#'
           name='Home'
+          class='active item'
           active={activeItem === 'Home'}
           onClick={this.handleItemClick}>
           <img src= {Logo} style={logoStyle}/>
         </Menu.Item>
 
-          <Menu>
+
             <Menu.Item
               as={Link} to='/aboutme'
               name='AboutMe'
-              class={this.state}
+              class="item"
               active={activeItem === 'MenuAboutMe'}
               onClick={this.handleItemClick}
               style={menuStyle}>
-              ABOUT ME
+
+
+
+
+                  ABOUT ME
+
+
             </Menu.Item>
 
             <Menu.Item
                as={Link} to='/projects'
                name='Projects'
+               class="item"
                active={activeItem === 'MenuProjects'}
                onClick={this.handleItemClick}
                style={menuStyle}>
-              PROJECTS
+
+                   PROJECTS
+
             </Menu.Item>
 
             <Menu.Item
                as={Link} to='/cv'
                name='Cv'
+               class="item"
                active={activeItem === 'MenuCv'}
                onClick={this.handleItemClick}
                style={menuStyle}>
-              CV
+
+                   CV
+
             </Menu.Item>
 
           <Menu.Item
              as={Link} to='/contact'
              name='Contact'
+             class="item"
              active={activeItem === 'MenuContact'}
              onClick={this.handleItemClick}
              style={menuStyle}>
-            CONTACT
+
+                 CONTACT
+
           </Menu.Item>
-        </Menu>
+
     </Menu>
     )
   }
