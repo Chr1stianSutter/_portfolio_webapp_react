@@ -62,14 +62,23 @@ export default class Layout extends React.Component {
         };
 
         const myNameStyle={
-          fontSize:"70pt",
+          fontSize:"90pt",
           fontFamily: 'Montserrat',
           textTransform:"uppercase",
           lineHeight:"0.9em"
         };
 
         const smallTextStyle ={
-          fontFamily: 'Montserrat'
+          fontFamily: 'Montserrat',
+          fontSize:"25pt"
+        };
+
+        const divBarStyle = {
+          height:"10px",
+          width:"150px",
+          marginTop: "30px",
+          marginBottom:"25px",
+          backgroundColor:'black'
         }
 
         return (
@@ -95,6 +104,9 @@ export default class Layout extends React.Component {
                     <div style={textStyle}>
                      <h2 style={smallTextStyle} >Hello I'm</h2>
                      <h1 style={myNameStyle}> Christian<br/>Sutter</h1>
+                     <div style={divBarStyle}>
+
+                     </div>
                      <h2 style={smallTextStyle}> I'm a DIGITAL DESIGNER with<br/>a focus on UI and USABILITY</h2>
 
                    </div>
