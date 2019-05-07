@@ -13,10 +13,10 @@ import LandingPage2 from "../pages/LandingPage2";
 import AboutMe from "../pages/AboutMe"
 
 //projects
-import TextFromRestCall from "../pages/TextFromRestCall"
+import Projects from "../pages/Projects"
 
 //cv
-import Cars from "../pages/Cars"
+import CV from "../pages/CV"
 
 //contact me
 import TableTest from "../pages/TableTest"
@@ -57,8 +57,8 @@ export default class Layout extends React.Component {
 
                                 <Route exact path="/" component={LandingPage2}/>
                                 <Route exact path="/aboutme" component={AboutMe}/>
-                                <Route exact path="/projects" component={TextFromRestCall}/>
-                                <Route exact path="/cv" component={Cars}/>
+                                <Route exact path="/projects" component={Projects}/>
+                                <Route exact path="/cv" component={CV}/>
                                 <Route exact path="/contact" component={TableTest}/>
                             </div>
                         </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid } from 'semantic-ui-react'
 
-export default class AboutMe extends React.Component {
+export default class CV extends React.Component {
   render() {
 
     const textStyle = {
@@ -14,7 +14,7 @@ export default class AboutMe extends React.Component {
     const textStyleGrid = {
       position: 'absolute',
       marginLeft:"12%",
-      marginTop:"15%",
+      marginTop:"20%",
 
     };
 
@@ -39,7 +39,7 @@ export default class AboutMe extends React.Component {
     }
     const divBarStyle2 = {
       height:"10px",
-      width:"310px",
+      width:"250px",
       marginTop: "0px",
       marginBottom:"25px",
       backgroundColor:'black'
@@ -52,26 +52,18 @@ export default class AboutMe extends React.Component {
           <Grid.Row>
           <div style={textStyle}>
             <h2 style={smallTextStyle} >Christian Sutter</h2>
-            <h1 style={myNameStyle}> ABOUT ME</h1>
+            <h1 style={myNameStyle}>CURRICULUM<br/>VITAE</h1>
             <div style={divBarStyle}></div>
           </div>
           </Grid.Row>
         <Grid.Row style={textStyleGrid}>
-        <Grid.Column width={4}>
+        <Grid.Column width={5}>
           <div >
-            <h2 style={smallTextStyle}> Hi! I'm a graduate from the<br/>University of Applied Sciences<br/>Weingarten.</h2>
-            <h2 style={smallTextStyle}> My major was DMD or digital<br/>media design, you can check them<br/>out here:</h2>
-            <h2 style ={smallTextStyle}> digitalmediadesign.io</h2>
+            <h2 style={smallTextStyle}>Want to download my CV?</h2>
+            <h2 style={smallTextStyle}>Here you go:</h2>
+            <h2 style ={smallTextStyle}>Curriculum Vitae</h2>
             <div style={divBarStyle2}></div>
           </div>
-        </Grid.Column>
-        <Grid.Column width={4}>
-        <div>
-
-          <h2 style={smallTextStyle}> I have a passion for digital<br/>interfaces, user-centered design,<br/>bold fonts, and lots of whitespace.</h2>
-          <h2 style={smallTextStyle}> A problem-solver at heart, with a<br/>love for all things usability.</h2>
-
-        </div>
         </Grid.Column>
         </Grid.Row>
       </Grid>
