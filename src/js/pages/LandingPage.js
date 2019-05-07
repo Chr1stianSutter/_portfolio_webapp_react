@@ -10,7 +10,7 @@ import LandingPage from "../pages/LandingPage";
 import LandingPage2 from "../pages/LandingPage2";
 
 //about me
-import MobxInteraction from "../pages/MobxInteraction"
+import AboutMe from "../pages/AboutMe"
 
 //projects
 import TextFromRestCall from "../pages/TextFromRestCall"
@@ -56,7 +56,7 @@ export default class Layout extends React.Component {
                             <div class="col-xs-12" >
 
                                 <Route exact path="/" component={LandingPage2}/>
-                                <Route exact path="/aboutme" component={MobxInteraction}/>
+                                <Route exact path="/aboutme" component={AboutMe}/>
                                 <Route exact path="/projects" component={TextFromRestCall}/>
                                 <Route exact path="/cv" component={Cars}/>
                                 <Route exact path="/contact" component={TableTest}/>

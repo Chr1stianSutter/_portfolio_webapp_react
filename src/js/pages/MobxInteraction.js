@@ -6,6 +6,7 @@ import RabbitCards from '../components/RabbitCards'
 export default class MobxInteraction extends React.Component {
   render() {
     return (
+
       <div>
         <Grid celled>
         <Grid.Row>
