@@ -1,6 +1,6 @@
 import React from "react";
-import { Grid } from 'semantic-ui-react'
-import { Card } from 'semantic-ui-react'
+import { Grid, Card } from 'semantic-ui-react'
+
 import ProjectCards from '../components/ProjectCards'
 import image from '../res/image.jpg';
 import {
@@ -13,22 +13,26 @@ import {
 
 //test for Router - remove later
 import LandingPage2 from "../pages/LandingPage2";
+import AboutMe from "../pages/AboutMe";
 
 
 export default class Projects extends React.Component {
-
+/*
   linkToProject1() {
-      console.log("CLICKED-1");
+
+      console.log("CLICKED-1")
 
         <div>
           <Link to="/"></Link>
           <Route exact path="/" component={LandingPage2}/>
         </div>
 
+
 };
 
 linkToProject2() {
-    console.log("CLICKED-2");
+
+    console.log("CLICKED-2")
 
       <div>
         <Link to="/"></Link>
@@ -38,7 +42,8 @@ linkToProject2() {
 };
 
 linkToProject3() {
-    console.log("CLICKED-3");
+
+    console.log("CLICKED-3")
 
       <div>
         <Link to="/"></Link>
@@ -48,14 +53,15 @@ linkToProject3() {
 };
 
 linkToProject4() {
+
     console.log("CLICKED-4");
 
       <div>
         <Link to="/">LINK</Link>
         <Route exact path="/" component={LandingPage2}/>
       </div>
-
 };
+*/
 
   render() {
 
@@ -74,6 +80,10 @@ linkToProject4() {
       marginLeft:"12%",
       marginTop:"15%",
 
+    };
+
+    const cardImageStyle = {
+      width: "400px"
     };
 
     const myNameStyle={
@@ -115,30 +125,37 @@ linkToProject4() {
           </div>
           </Grid.Row>
           <Grid.Row>
-
+<div>
             <div style={cardStyle}>
-              <div class="ui five cards">
-                <div class="ui raised card">
-                  <div class="image"><img src={image} onClick={this.linkToProject1}/>
-
-
-                  </div>
-
+            <Switch>
+              <div class="ui six cards">
+                <div class="ui raised card" style={cardImageStyle}>
+                  <Link to="/"> <img src={image} style={cardImageStyle}/> </Link>
                 </div>
-                <div class="ui raised card">
-                  <div class="image"><img src={image} onClick={this.linkToProject2}/></div>
+                <div class="ui raised card" style={cardImageStyle}>
+                    <Link to="/aboutme"> <img src={image} style={cardImageStyle}/> </Link>
                 </div>
-                <div class="ui raised card">
-                  <div class="image"><img src={image} onClick={this.linkToProject3}/></div>
+                <div class="ui raised card" style={cardImageStyle}>
+                    <Link to="/"> <img src={image} style={cardImageStyle}/> </Link>
                 </div>
-                <div class="ui raised card">
-                  <div class="image"><img src={image} onClick={this.linkToProject4}/></div>
+                <div class="ui raised card" style={cardImageStyle}>
+                    <Link to="/"> <img src={image} style={cardImageStyle}/> </Link>
                 </div>
+                <Route exact path='/' component={LandingPage2}></Route>
+                <Route exact path='/aboutme' component={AboutMe}></Route>
+                  {/*
+                    * funny stuff when i put the routes here
+                    *   <Route exact path='/' component={LandingPage2}></Route>
+                    *   <Route exact path='/aboutme' component={AboutMe}></Route>
+                    */}
               </div>
 
 
+              </Switch>
             </div>
 
+
+</div>
 
 
           </Grid.Row>
