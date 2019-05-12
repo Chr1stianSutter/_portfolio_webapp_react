@@ -3,9 +3,60 @@ import { Grid } from 'semantic-ui-react'
 import { Card } from 'semantic-ui-react'
 import ProjectCards from '../components/ProjectCards'
 import image from '../res/image.jpg';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch,
+  Redirect
+} from 'react-router-dom'
+
+//test for Router - remove later
+import LandingPage2 from "../pages/LandingPage2";
 
 
 export default class Projects extends React.Component {
+
+  linkToProject1() {
+      console.log("CLICKED-1");
+
+        <div>
+          <Link to="/"></Link>
+          <Route exact path="/" component={LandingPage2}/>
+        </div>
+
+};
+
+linkToProject2() {
+    console.log("CLICKED-2");
+
+      <div>
+        <Link to="/"></Link>
+        <Route exact path="/" component={LandingPage2}/>
+      </div>
+
+};
+
+linkToProject3() {
+    console.log("CLICKED-3");
+
+      <div>
+        <Link to="/"></Link>
+        <Route exact path="/" component={LandingPage2}/>
+      </div>
+
+};
+
+linkToProject4() {
+    console.log("CLICKED-4");
+
+      <div>
+        <Link to="/">LINK</Link>
+        <Route exact path="/" component={LandingPage2}/>
+      </div>
+
+};
+
   render() {
 
 
@@ -64,22 +115,32 @@ export default class Projects extends React.Component {
           </div>
           </Grid.Row>
           <Grid.Row>
+
             <div style={cardStyle}>
               <div class="ui five cards">
                 <div class="ui raised card">
-                  <div class="image"><img src={image} /></div>
+                  <div class="image"><img src={image} onClick={this.linkToProject1}/>
+
+
+                  </div>
+
                 </div>
                 <div class="ui raised card">
-                  <div class="image"><img src={image} /></div>
+                  <div class="image"><img src={image} onClick={this.linkToProject2}/></div>
                 </div>
                 <div class="ui raised card">
-                  <div class="image"><img src={image} /></div>
+                  <div class="image"><img src={image} onClick={this.linkToProject3}/></div>
                 </div>
                 <div class="ui raised card">
-                  <div class="image"><img src={image} /></div>
+                  <div class="image"><img src={image} onClick={this.linkToProject4}/></div>
                 </div>
               </div>
+
+
             </div>
+
+
+
           </Grid.Row>
 
         </Grid>
