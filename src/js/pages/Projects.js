@@ -3,7 +3,7 @@ import { Grid, Card } from 'semantic-ui-react'
 
 import ProjectCards from '../components/ProjectCards'
 
-import Project1 from '../pages/Project1'
+import { withRouter } from "react-router";
 
 import image from '../res/image.jpg';
 import {
@@ -14,14 +14,27 @@ import {
   Redirect
 } from 'react-router-dom'
 
+import Project1 from "../pages/Project1";
+import Project2 from "../pages/Project2";
+
 //test for Router - remove later
 import LandingPage2 from "../pages/LandingPage2";
 import AboutMe from "../pages/AboutMe";
 
 
+
+
 export default class Projects extends React.Component {
 
+  constructor() {
+    super();
+    this.state = { activeItem : 'Project2' }
+  }
+
+  handleItemClick = (e, { name  }) => this.setState({ activeItem: name })
+
   render() {
+  const { activeItem } = this.state
 
     const textStyle = {
       position: 'absolute',
@@ -83,14 +96,18 @@ export default class Projects extends React.Component {
           <Grid.Row>
 <div>
             <div style={cardStyle}>
+
             <Switch>
               <div class="ui six cards">
+
+
                 <div class="ui raised card" style={cardImageStyle}>
-                  <Link to="/project1"> <img src={image} style={cardImageStyle}/> </Link>
-                  <Route exact path="/project1" component={Project1}/>
+                <Link to={{ pathname: '/project1', state: 'flushdeal'}}> <img src={image} style={cardImageStyle}/> </Link>
                 </div>
+
+
                 <div class="ui raised card" style={cardImageStyle}>
-                    <Link to="/aboutme"> <img src={image} style={cardImageStyle}/> </Link>
+                    <Link to={{ pathname: '/project2', state: 'flushdeal'}}> <img src={image} style={cardImageStyle}/> </Link>
                 </div>
                 <div class="ui raised card" style={cardImageStyle}>
                     <Link to="/"> <img src={image} style={cardImageStyle}/> </Link>
@@ -100,15 +117,13 @@ export default class Projects extends React.Component {
                 </div>
                 <Route exact path='/' component={LandingPage2}></Route>
                 <Route exact path='/aboutme' component={AboutMe}></Route>
-                  {/*
-                    * funny stuff when i put the routes here
-                    *   <Route exact path='/' component={LandingPage2}></Route>
-                    *   <Route exact path='/aboutme' component={AboutMe}></Route>
-                    */}
+                <Route exact path="/project2" exact component={Project2}/>
+
               </div>
 
 
               </Switch>
+
             </div>
 
 
@@ -119,6 +134,7 @@ export default class Projects extends React.Component {
 
         </Grid>
       </div>
+
     );
   }
 }

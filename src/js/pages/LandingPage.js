@@ -14,12 +14,21 @@ import AboutMe from "../pages/AboutMe"
 
 //projects
 import Projects from "../pages/Projects"
+//Project1
+import Project1 from "../pages/Project1"
+//project2
+import Project2 from "../pages/Project2"
+//Project3
+//
+//Project4
 
 //cv
 import CV from "../pages/CV"
 
 //contact me
 import Contact from "../pages/Contact"
+
+
 
 
 import { observer } from "mobx-react";
@@ -60,6 +69,8 @@ export default class Layout extends React.Component {
                                 <Route exact path="/projects" component={Projects}/>
                                 <Route exact path="/cv" component={CV}/>
                                 <Route exact path="/contact" component={Contact}/>
+                                <Route exact path="/project1" component={Project1}/>
+                                <Route exact path="/project2" component={Project2}/>
                             </div>
                         </div>
 
