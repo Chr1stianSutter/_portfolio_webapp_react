@@ -2,6 +2,9 @@ import React from "react";
 import { Grid, Card } from 'semantic-ui-react'
 
 import ProjectCards from '../components/ProjectCards'
+
+import Project1 from '../pages/Project1'
+
 import image from '../res/image.jpg';
 import {
   BrowserRouter as Router,
@@ -17,55 +20,8 @@ import AboutMe from "../pages/AboutMe";
 
 
 export default class Projects extends React.Component {
-/*
-  linkToProject1() {
-
-      console.log("CLICKED-1")
-
-        <div>
-          <Link to="/"></Link>
-          <Route exact path="/" component={LandingPage2}/>
-        </div>
-
-
-};
-
-linkToProject2() {
-
-    console.log("CLICKED-2")
-
-      <div>
-        <Link to="/"></Link>
-        <Route exact path="/" component={LandingPage2}/>
-      </div>
-
-};
-
-linkToProject3() {
-
-    console.log("CLICKED-3")
-
-      <div>
-        <Link to="/"></Link>
-        <Route exact path="/" component={LandingPage2}/>
-      </div>
-
-};
-
-linkToProject4() {
-
-    console.log("CLICKED-4");
-
-      <div>
-        <Link to="/">LINK</Link>
-        <Route exact path="/" component={LandingPage2}/>
-      </div>
-};
-*/
 
   render() {
-
-
 
     const textStyle = {
       position: 'absolute',
@@ -130,7 +86,8 @@ linkToProject4() {
             <Switch>
               <div class="ui six cards">
                 <div class="ui raised card" style={cardImageStyle}>
-                  <Link to="/"> <img src={image} style={cardImageStyle}/> </Link>
+                  <Link to="/project1"> <img src={image} style={cardImageStyle}/> </Link>
+                  <Route exact path="/project1" component={Project1}/>
                 </div>
                 <div class="ui raised card" style={cardImageStyle}>
                     <Link to="/aboutme"> <img src={image} style={cardImageStyle}/> </Link>
