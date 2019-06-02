@@ -1,5 +1,5 @@
-import React, { Component, createRef } from 'react'
-import { Menu, Ref, Sticky } from 'semantic-ui-react'
+import React, { Component } from 'react'
+import { Menu } from 'semantic-ui-react'
 import { Link } from "react-router-dom";
 import Logo from "../res/logo.jpg";
 import ClassNames from "classnames";
@@ -10,7 +10,7 @@ export default class MenuExampleBasic extends Component {
   constructor() {
     super();
     this.state = { activeItem : 'Home' }
-    contextRef = React.createRef();
+
   }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
@@ -39,10 +39,8 @@ export default class MenuExampleBasic extends Component {
     };
 
     return (
-      <Ref innerRef={this.contextRef}>
 
       <div class="ui inverted segment">
-      <Sticky context={this.contextRef}>
       <Menu class="ui inverted secondary pointing menu">
         <Menu.Item
           as={Link} to='/'
@@ -107,9 +105,9 @@ export default class MenuExampleBasic extends Component {
           </Menu.Item>
 
     </Menu>
-    </Sticky>
+
     </div>
-    </Ref>
+
     )
   }
 }
