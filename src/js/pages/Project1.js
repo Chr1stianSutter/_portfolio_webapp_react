@@ -14,6 +14,10 @@ export default class Project1 extends React.Component {
       marginLeft:"20px"
     };
 
+    const gridStyle = {
+      backgroundColor:"red"
+    }
+
     const bigTextStyleGuideStyle={
       fontSize:"90pt",
       fontFamily: 'Montserrat',
@@ -23,9 +27,26 @@ export default class Project1 extends React.Component {
       marginTop: "200px"
     };
 
+    const bigTextUsersStyle={
+      fontSize:"90pt",
+      fontFamily: 'Montserrat',
+      textTransform:"uppercase",
+      lineHeight:"0.9em",
+      //position: "absolute",
+      marginTop: "120px",
+      textAlign: "right",
+
+    };
+
     const smallTextStyle ={
       fontFamily: 'Montserrat',
       fontSize:"20pt"
+    };
+
+    const smallTextStyleRight ={
+      fontFamily: 'Montserrat',
+      fontSize:"20pt",
+      textAlign:"right"
     };
 
     const smallTextStyleFloat ={
@@ -50,6 +71,17 @@ export default class Project1 extends React.Component {
       backgroundColor:'black'
     }
 
+    const divBarStyleRight = {
+      height:"10px",
+      width:"150px",
+      marginTop: "30px",
+      marginBottom:"25px",
+      backgroundColor:'black',
+      marginLeft:"auto",
+      marginRight:"0",
+      //float:"right"
+    }
+
     const cardImageStyle = {
       height: "600px",
       width: "100%",
@@ -65,6 +97,34 @@ export default class Project1 extends React.Component {
       color: "gray",
       opacity: "0.1",
       marginBottom: "350px"
+    }
+
+    const hugeBgTextStyleRight = {
+      fontSize:"240pt",
+      fontFamily: 'Montserrat',
+      textTransform:"uppercase",
+      lineHeight:"0.9em",
+      letterSpacing: "0.05em",
+      color: "gray",
+      opacity: "0.1",
+      textAlign: "right",
+      //marginBottom: "350px"
+    }
+
+    const absoluteStyle = {
+      position:"absolute",
+      textAlign: "right",
+      //backgroundColor: "red",
+      width: "98%",
+      //display: "block",
+      //marginRight:"20px"
+    };
+
+    const wrapperStyle = {
+      width: "100%",
+    }
+    const ulSyle = {
+      direction:"rtl"
     }
 
     const spacerDiv = {
@@ -88,7 +148,7 @@ return(
 
 <div>
 
-<Grid columns='equal'>
+<Grid columns='equal' >
   <Grid.Column>
 
     <div class="column">
@@ -96,7 +156,7 @@ return(
     </div>
 
   </Grid.Column>
-  <Grid.Column width={8}>
+  <Grid.Column width={8} style = {gridStyle}>
 
     <div class="eight wide column">
         <h2 style={smallTextStyle}>Projects:</h2>
@@ -107,6 +167,14 @@ return(
         <img src={image} style={cardImageStyle}/>
         <div style={spacerDiv}></div>
     </div>
+
+    <Grid.Column>
+
+      <div class="column">
+
+      </div>
+
+    </Grid.Column>
 
     <Grid columns='equal'>
     <Grid.Column width={8}>
@@ -145,7 +213,7 @@ return(
 
   </Grid.Column>
 </Grid>
-<Grid>
+<Grid style = {gridStyle}>
   <Grid.Column width={4}></Grid.Column>
   <Grid.Column width={8}>
     <h2 style={bigTextStyleGuideStyle}>
@@ -171,7 +239,7 @@ return(
 
 
 
-      <Grid>
+      <Grid style = {gridStyle}>
       <Grid.Column width={8}>
         <h2 style = {smallTextStyleFloat}>
         Futura - Bold
@@ -204,6 +272,7 @@ return(
 
 
   </Grid>
+
   <Grid>
   <Grid.Column width={2}></Grid.Column>
   <Grid.Column width={8}>
@@ -216,6 +285,60 @@ return(
     Test
     </h1>
     </Grid.Column>
+
+</Grid>
+
+<Grid>
+  <Grid.Column width={4}></Grid.Column>
+  <Grid.Column width={8} style = {gridStyle}>
+
+    <div style = {absoluteStyle}>
+      <h2 style={bigTextUsersStyle}>
+        Users
+      </h2>
+      <div style={divBarStyleRight}></div>
+
+      <Grid columns='equal'>
+        <Grid.Column width={8}>
+          <img src={image} style={cardImageStyle}/>
+        </Grid.Column>
+
+        <Grid.Column width={8}>
+
+        <h2 style = {smallTextStyleRight}>
+        Needs
+        </h2>
+
+        <h1 style={smallTextStyleRight}>
+        <ul style = {ulSyle}>
+          <li>test 1</li>
+          <li>test 2</li>
+          <li>test 3</li>
+          <li>test 4</li>
+        </ul>
+
+        </h1>
+
+        <h2 style = {smallTextStyleRight}>
+        Motto
+        </h2>
+        </Grid.Column>
+
+      </Grid>
+  </div>
+
+
+  </Grid.Column>
+</Grid>
+
+<Grid>
+<Grid.Column width={6}></Grid.Column>
+<Grid.Column width={8}>
+  <h1 style={hugeBgTextStyleRight}>
+    Users
+  </h1>
+
+  </Grid.Column>
 
 </Grid>
 
