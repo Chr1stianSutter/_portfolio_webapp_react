@@ -27,6 +27,15 @@ export default class Project1 extends React.Component {
       marginTop: "200px"
     };
 
+    const bigTextNavigationStyle={
+      fontSize:"90pt",
+      fontFamily: 'Montserrat',
+      textTransform:"uppercase",
+      lineHeight:"0.9em",
+      position: "absolute",
+      marginTop: "120px"
+    };
+
     const bigTextUsersStyle={
       fontSize:"90pt",
       fontFamily: 'Montserrat',
@@ -120,7 +129,7 @@ export default class Project1 extends React.Component {
       color: "gray",
       opacity: "0.1",
       textAlign: "right",
-      //marginBottom: "350px"
+      marginBottom: "650px"
     }
 
     const absoluteStyle = {
@@ -361,9 +370,32 @@ return(
 
 </Grid>
 
+<Grid style = {gridStyle}>
+  <Grid.Column width={4}></Grid.Column>
+  <Grid.Column width={8}>
+    <h2 style={bigTextNavigationStyle}>
+      Navigation
+      <div style={divBarStyle}></div>
 
+      <h2 style = {smallTextStyle}>
+      *Title*
+      </h2>
+  </h2>
+  </Grid.Column>
+</Grid>
+
+<Grid>
+<Grid.Column width={2}></Grid.Column>
+<Grid.Column width={8}>
+  <h1 style={hugeBgTextStyle}>
+    Navigation
+  </h1>
+</Grid.Column>
+</Grid>
 
 </div>
+
+
 
 
 );
