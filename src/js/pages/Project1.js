@@ -33,7 +33,8 @@ export default class Project1 extends React.Component {
       textTransform:"uppercase",
       lineHeight:"0.9em",
       position: "absolute",
-      marginTop: "120px"
+      marginTop: "120px",
+      //marginBottom:"50px"
     };
 
     const bigTextUsersStyle={
@@ -77,6 +78,15 @@ export default class Project1 extends React.Component {
       position:"absoulte"
     };
 
+    const smallTextStyleFloatRight ={
+      fontFamily: 'Montserrat',
+      fontSize:"18pt",
+      textTransform:"none",
+      position:"absoulte",
+      textAlign:"right"
+    };
+
+
     const smallTextStyleTypefaceA ={
       fontFamily: 'Montserrat',
       fontSize:"18pt",
@@ -109,6 +119,12 @@ export default class Project1 extends React.Component {
       //marginTop:"65px"
     };
 
+    const cardImageStyleTwoSmall = {
+      height: "400px",
+      width: "100%",
+      //marginTop:"65px"
+    };
+
     const hugeBgTextStyle = {
       fontSize:"240pt",
       fontFamily: 'Montserrat',
@@ -119,6 +135,18 @@ export default class Project1 extends React.Component {
       opacity: "0.1",
       marginBottom: "350px"
     }
+
+    const hugeBgTextStyleNavigation = {
+      fontSize:"240pt",
+      fontFamily: 'Montserrat',
+      textTransform:"uppercase",
+      lineHeight:"0.9em",
+      letterSpacing: "0.05em",
+      color: "gray",
+      opacity: "0.1",
+      marginBottom: "50px"
+    }
+
 
     const hugeBgTextStyleRight = {
       fontSize:"240pt",
@@ -387,10 +415,69 @@ return(
 <Grid>
 <Grid.Column width={2}></Grid.Column>
 <Grid.Column width={8}>
-  <h1 style={hugeBgTextStyle}>
+  <h1 style={hugeBgTextStyleNavigation}>
     Navigation
   </h1>
 </Grid.Column>
+</Grid>
+
+<Grid columns='equal'>
+
+<Grid.Column>
+  <div class="column"></div>
+</Grid.Column>
+
+<Grid.Column width={8}>
+
+<Grid columns='equal'>
+<Grid.Column width={8}>
+
+<div class="eight wide column">
+
+<h2 style={smallTextStyleFloatRight}>
+Lorem ipsum dolor sit amet, consetetur <br/>
+sadipscing elitr, sed diam nonumy <br/>
+eirmod tempor invidunt ut labore et <br/>
+dolore magna aliquyam erat.
+<br/>
+<br/>
+<br/>
+<br/>
+</h2>
+
+    <img src={image} style={cardImageStyleTwoSmall}/>
+</div>
+
+</Grid.Column>
+<Grid.Column width={8}>
+
+<div class="four wide column">
+
+      <img src={image} style={cardImageStyleTwoSmall}/>
+
+      <h2 style={smallTextStyleFloat}>
+      <br/>
+      <br/>
+      <br/>
+      Lorem ipsum dolor sit amet, consetetur <br/>
+      sadipscing elitr, sed diam nonumy <br/>
+      eirmod tempor invidunt ut labore et <br/>
+      dolore magna aliquyam erat.
+      </h2>
+
+</div>
+
+</Grid.Column>
+</Grid>
+
+</Grid.Column>
+
+<Grid.Column>
+  <div class="column"></div>
+</Grid.Column>
+
+
+
 </Grid>
 
 </div>
