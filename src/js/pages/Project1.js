@@ -20,7 +20,6 @@ export default class Project1 extends React.Component {
       textTransform:"uppercase",
       lineHeight:"0.9em",
       position: "absolute",
-      marginLeft:"20px",
       marginTop: "200px"
     };
 
@@ -32,8 +31,16 @@ export default class Project1 extends React.Component {
     const smallTextStyleFloat ={
       fontFamily: 'Montserrat',
       fontSize:"18pt",
+      textTransform:"none",
+      position:"absoulte"
+    };
+
+    const smallTextStyleTypefaceA ={
+      fontFamily: 'Montserrat',
+      fontSize:"18pt",
       textTransform:"none"
     };
+
 
     const divBarStyle = {
       height:"10px",
@@ -56,7 +63,8 @@ export default class Project1 extends React.Component {
       lineHeight:"0.9em",
       letterSpacing: "0.05em",
       color: "gray",
-      opacity: "0.1"
+      opacity: "0.1",
+      marginBottom: "350px"
     }
 
     const spacerDiv = {
@@ -66,6 +74,7 @@ export default class Project1 extends React.Component {
     const insetStyle = {
       marginTop:"30px",
       marginRight: "10px",
+      marginBottom: "70px",
       inlineStyle:"block",
       float: "left",
       shapeOutside:"inset(0px)",
@@ -139,7 +148,6 @@ return(
 <Grid>
   <Grid.Column width={4}></Grid.Column>
   <Grid.Column width={8}>
-
     <h2 style={bigTextStyleGuideStyle}>
       Style Guide
       <div style={divBarStyle}></div>
@@ -154,9 +162,47 @@ return(
       <div style={insetStyle}></div>
       <div style={insetStyle}></div>
       </Grid.Column>
+
+
+
+      <h2 style = {smallTextStyle}>
+      Typefaces
+      </h2>
+
+
+
+      <Grid>
+      <Grid.Column width={8}>
+        <h2 style = {smallTextStyleFloat}>
+        Futura - Bold
+        <div style={divBarStyle}></div>
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ
+        <br/>
+        abcdefghijklmnopqrstuvwxyz
+        <br/>
+        0123456789
+        </h2>
+      </Grid.Column>
+      <Grid.Column width={8}>
+        <h2 style = {smallTextStyleFloat}>
+        Helvetica - Regular
+        <div style={divBarStyle}></div>
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ
+        <br/>
+        abcdefghijklmnopqrstuvwxyz
+        <br/>
+        0123456789
+        </h2>
+      </Grid.Column>
+      </Grid>
+
+
     </h2>
 
+
   </Grid.Column>
+
+
   </Grid>
   <Grid>
   <Grid.Column width={2}></Grid.Column>
@@ -165,9 +211,15 @@ return(
       Style<br/>
       Guide
     </h1>
+
+    <h1>
+    Test
+    </h1>
     </Grid.Column>
 
 </Grid>
+
+
 
 </div>
 
