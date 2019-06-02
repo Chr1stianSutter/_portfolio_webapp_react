@@ -15,7 +15,7 @@ export default class Project1 extends React.Component {
     };
 
     const gridStyle = {
-      backgroundColor:"red"
+      //backgroundColor:"red"
     }
 
     const bigTextStyleGuideStyle={
@@ -84,6 +84,14 @@ export default class Project1 extends React.Component {
       textTransform:"none",
       position:"absoulte",
       textAlign:"right"
+    };
+
+    const smallTextStyleFloatLeft ={
+      fontFamily: 'Montserrat',
+      fontSize:"18pt",
+      textTransform:"none",
+      position:"absoulte",
+      textAlign:"left"
     };
 
 
@@ -329,10 +337,6 @@ return(
       Style<br/>
       Guide
     </h1>
-
-    <h1>
-    Test
-    </h1>
     </Grid.Column>
 
 </Grid>
@@ -475,9 +479,117 @@ dolore magna aliquyam erat.
 <Grid.Column>
   <div class="column"></div>
 </Grid.Column>
+</Grid>
+
+<div style={spacerDiv}></div>
+<div style={spacerDiv}></div>
+<div style={spacerDiv}></div>
+
+<Grid>
+  <Grid.Column width={4}></Grid.Column>
+  <Grid.Column width={8} style = {gridStyle}>
+
+    <div style = {absoluteStyle}>
+      <h2 style={bigTextUsersStyle}>
+        Music
+      </h2>
+      <div style={divBarStyleRight}></div>
+
+      <h2 style = {smallTextStyleRight}>
+      Play your favorite songs!
+      </h2>
+
+      <div style={spacerDiv}></div>
+
+      <Grid columns='equal'>
+        <Grid.Column width={8}>
+        <img src={image} style={cardImageStyleTwoSmall}/>
+
+        <h2 style={smallTextStyleFloat}>
+        <br/>
+        <br/>
+        Lorem ipsum dolor sit amet, consetetur <br/>
+        sadipscing elitr, sed diam nonumy <br/>
+        eirmod tempor invidunt ut labore et <br/>
+        dolore magna aliquyam erat.
+
+        </h2>
+        </Grid.Column>
+
+        <Grid.Column width={8}>
 
 
 
+        <h2 style={smallTextStyleFloatLeft}>
+        Lorem ipsum dolor sit amet, consetetur <br/>
+        sadipscing elitr, sed diam nonumy <br/>
+        eirmod tempor invidunt ut labore et <br/>
+        dolore magna aliquyam erat.
+        <br/>
+        <br/>
+        <br/>
+        </h2>
+
+          <img src={image} style={cardImageStyleTwoSmall}/>
+
+        </Grid.Column>
+      </Grid>
+  </div>
+
+
+  </Grid.Column>
+</Grid>
+
+<Grid>
+<Grid.Column width={6}></Grid.Column>
+<Grid.Column width={8}>
+  <h1 style={hugeBgTextStyleRight}>
+    Music
+  </h1>
+
+  </Grid.Column>
+</Grid>
+  <div style={spacerDiv}></div>
+  <div style={spacerDiv}></div>
+  <div style={spacerDiv}></div>
+
+  <Grid style = {gridStyle}>
+    <Grid.Column width={4}></Grid.Column>
+    <Grid.Column width={8}>
+      <h2 style={bigTextNavigationStyle}>
+        *Name*
+        <div style={divBarStyle}></div>
+
+        <h2 style = {smallTextStyle}>
+        A stylish and green way of
+        <br/>
+        transportation!
+        </h2>
+    </h2>
+    </Grid.Column>
+  </Grid>
+
+<Grid>
+<Grid.Column width={2}></Grid.Column>
+<Grid.Column width={8}>
+  <h1 style={hugeBgTextStyleNavigation}>
+    *Name*
+  </h1>
+</Grid.Column>
+</Grid>
+
+<Grid columns='equal' >
+  <Grid.Column>
+    <div class="column"></div>
+  </Grid.Column>
+  <Grid.Column width={8} style = {gridStyle}>
+    <div class="eight wide column">
+        <img src={image} style={cardImageStyle}/>
+    </div>
+  </Grid.Column>
+  <Grid.Column>
+    <div class="column"></div>
+  </Grid.Column>
 </Grid>
 
 </div>
