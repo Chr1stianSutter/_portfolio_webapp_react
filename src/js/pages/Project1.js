@@ -49,6 +49,18 @@ export default class Project1 extends React.Component {
       textAlign:"right"
     };
 
+    const mottoStyleRight ={
+      fontFamily: 'Montserrat',
+      fontSize:"48pt",
+      textAlign:"left",
+      position:"absolute",
+      //width: "100%",
+      marginTop:"350px",
+      //marginRight:"0px",
+      marginLeft:"450px"
+
+    };
+
     const smallTextStyleFloat ={
       fontFamily: 'Montserrat',
       fontSize:"18pt",
@@ -239,8 +251,8 @@ return(
 
 
 
-      <Grid style = {gridStyle}>
-      <Grid.Column width={8}>
+      <Grid columns='equal' >
+      <Grid.Column width={8} style = {gridStyle}>
         <h2 style = {smallTextStyleFloat}>
         Futura - Bold
         <div style={divBarStyle}></div>
@@ -324,6 +336,13 @@ return(
         </h2>
         </Grid.Column>
 
+        <h2 style = {mottoStyleRight}>
+        " I want to make use of
+        <br/>
+        positive affirmations to
+        <br/>
+        further my growth! "
+        </h2>
       </Grid>
   </div>
 
