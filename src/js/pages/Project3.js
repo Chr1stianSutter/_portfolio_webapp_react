@@ -37,6 +37,16 @@ export default class Project3 extends React.Component {
       //marginBottom:"50px"
     };
 
+    const bigTextCall2ActionStyle={
+      fontSize:"90pt",
+      fontFamily: 'Montserrat',
+      textTransform:"uppercase",
+      lineHeight:"0.9em",
+      position: "absolute",
+      marginTop: "220px",
+      //marginBottom:"50px"
+    };
+
     const bigTextUsersStyle={
       fontSize:"90pt",
       fontFamily: 'Montserrat',
@@ -410,12 +420,12 @@ return(
 
     <div style = {absoluteStyle}>
       <h2 style={bigTextUsersStyle}>
-        Music
+        Causes
       </h2>
       <div style={divBarStyleRight}></div>
 
       <h2 style = {smallTextStyleRight}>
-      Play your favorite songs!
+      What causes unhealthy weight?
       </h2>
 
       <div style={spacerDiv}></div>
@@ -463,7 +473,7 @@ return(
 <Grid.Column width={6}></Grid.Column>
 <Grid.Column width={8}>
   <h1 style={hugeBgTextStyleRight}>
-    Music
+    Causes
   </h1>
 
   </Grid.Column>
@@ -475,8 +485,8 @@ return(
   <Grid style = {gridStyle}>
     <Grid.Column width={4}></Grid.Column>
     <Grid.Column width={8}>
-      <h2 style={bigTextNavigationStyle}>
-        Navigation
+      <h2 style={bigTextCall2ActionStyle}>
+        Call to Action
         <div style={divBarStyle}></div>
 
         <h2 style = {smallTextStyle}>
@@ -488,9 +498,10 @@ return(
 
   <Grid>
   <Grid.Column width={2}></Grid.Column>
-  <Grid.Column width={8}>
+  <Grid.Column width={11}>
     <h1 style={hugeBgTextStyleNavigation}>
-      Navigation
+      Call to<br/>
+      action
     </h1>
   </Grid.Column>
   </Grid>
