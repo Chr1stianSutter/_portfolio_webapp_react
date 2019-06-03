@@ -1,11 +1,8 @@
 import React from "react";
-import { Grid } from 'semantic-ui-react'
-import Blackground from "../res/black3.jpg";
-import { withRouter } from "react-router";
+import { Grid, Segment, Card} from 'semantic-ui-react'
 import image from '../res/image.jpg';
 
-export default class Project2 extends React.Component {
-
+export default class Project3 extends React.Component {
   render() {
 
     const bigTextStyle={
@@ -34,16 +31,6 @@ export default class Project2 extends React.Component {
       fontSize:"90pt",
       fontFamily: 'Montserrat',
       textTransform:"uppercase",
-      lineHeight:"0.9em",
-      position: "absolute",
-      marginTop: "120px",
-      //marginBottom:"50px"
-    };
-
-    const bigTextAffirmateStyle={
-      fontSize:"90pt",
-      fontFamily: 'Montserrat',
-      //textTransform:"uppercase",
       lineHeight:"0.9em",
       position: "absolute",
       marginTop: "120px",
@@ -135,13 +122,13 @@ export default class Project2 extends React.Component {
     }
 
     const cardImageStyle = {
-      height: "500px",
+      height: "600px",
       width: "100%",
       //marginTop:"65px"
     };
 
-    const cardImageStyleTall = {
-      height: "800px",
+    const cardImageStyleTwoSmall = {
+      height: "400px",
       width: "100%",
       //marginTop:"65px"
     };
@@ -161,17 +148,6 @@ export default class Project2 extends React.Component {
       fontSize:"240pt",
       fontFamily: 'Montserrat',
       textTransform:"uppercase",
-      lineHeight:"0.9em",
-      letterSpacing: "0.05em",
-      color: "gray",
-      opacity: "0.1",
-      marginBottom: "50px"
-    }
-
-    const hugeBgTextStyleAffirmate = {
-      fontSize:"240pt",
-      fontFamily: 'Montserrat',
-      //textTransform:"uppercase",
       lineHeight:"0.9em",
       letterSpacing: "0.05em",
       color: "gray",
@@ -426,77 +402,7 @@ return(
 
 </Grid>
 
-<Grid style = {gridStyle}>
-  <Grid.Column width={4}></Grid.Column>
-  <Grid.Column width={8}>
-    <h2 style={bigTextNavigationStyle}>
-      Create
-      <div style={divBarStyle}></div>
 
-      <h2 style = {smallTextStyle}>
-      Who do you want to be?
-      </h2>
-  </h2>
-  </Grid.Column>
-</Grid>
-
-<Grid>
-<Grid.Column width={2}></Grid.Column>
-<Grid.Column width={8}>
-  <h1 style={hugeBgTextStyleNavigation}>
-    Create
-  </h1>
-</Grid.Column>
-</Grid>
-
-<Grid columns='equal'>
-
-<Grid.Column>
-  <div class="column"></div>
-</Grid.Column>
-
-<Grid.Column width={8}>
-
-<Grid columns='equal'>
-<Grid.Column width={8}>
-
-<div class="eight wide column">
-
-<h2 style={smallTextStyleFloatLeft}>
-Lorem ipsum dolor sit amet, consetetur <br/>
-sadipscing elitr, sed diam nonumy <br/>
-eirmod tempor invidunt ut labore et <br/>
-dolore magna aliquyam erat.
-<br/>
-<br/>
-At vero eos et accusam et justo duo <br/>
-dolores et ea rebum. Stet clita kasd <br/>
-gubergren.
-</h2>
-
-
-</div>
-
-</Grid.Column>
-<Grid.Column width={8}>
-
-<div class="four wide column">
-      <img src={image} style={cardImageStyleTall}/>
-</div>
-
-</Grid.Column>
-</Grid>
-
-</Grid.Column>
-
-<Grid.Column>
-  <div class="column"></div>
-</Grid.Column>
-</Grid>
-
-<div style={spacerDiv}></div>
-
-<div style={spacerDiv}></div>
 
 <Grid>
   <Grid.Column width={4}></Grid.Column>
@@ -504,38 +410,47 @@ gubergren.
 
     <div style = {absoluteStyle}>
       <h2 style={bigTextUsersStyle}>
-        Manage
+        Music
       </h2>
       <div style={divBarStyleRight}></div>
 
       <h2 style = {smallTextStyleRight}>
-      Want to be something new?
+      Play your favorite songs!
       </h2>
 
       <div style={spacerDiv}></div>
 
       <Grid columns='equal'>
         <Grid.Column width={8}>
-        <img src={image} style={cardImageStyleTall}/>
+        <img src={image} style={cardImageStyleTwoSmall}/>
 
+        <h2 style={smallTextStyleFloat}>
+        <br/>
+        <br/>
+        Lorem ipsum dolor sit amet, consetetur <br/>
+        sadipscing elitr, sed diam nonumy <br/>
+        eirmod tempor invidunt ut labore et <br/>
+        dolore magna aliquyam erat.
 
+        </h2>
         </Grid.Column>
 
         <Grid.Column width={8}>
 
 
 
-        <h2 style={smallTextStyleFloatRight}>
+        <h2 style={smallTextStyleFloatLeft}>
         Lorem ipsum dolor sit amet, consetetur <br/>
         sadipscing elitr, sed diam nonumy <br/>
         eirmod tempor invidunt ut labore et <br/>
         dolore magna aliquyam erat.
         <br/>
         <br/>
-        At vero eos et accusam et justo duo <br/>
-        dolores et ea rebum. Stet clita kasd <br/>
-        gubergren.
+        <br/>
         </h2>
+
+          <img src={image} style={cardImageStyleTwoSmall}/>
+
         </Grid.Column>
       </Grid>
   </div>
@@ -545,17 +460,14 @@ gubergren.
 </Grid>
 
 <Grid>
-<Grid.Column width={5}></Grid.Column>
+<Grid.Column width={6}></Grid.Column>
 <Grid.Column width={8}>
   <h1 style={hugeBgTextStyleRight}>
-    Manage
+    Music
   </h1>
 
   </Grid.Column>
 </Grid>
-  <div style={spacerDiv}></div>
-
-  <div style={spacerDiv}></div>
   <div style={spacerDiv}></div>
   <div style={spacerDiv}></div>
   <div style={spacerDiv}></div>
@@ -564,19 +476,13 @@ gubergren.
     <Grid.Column width={4}></Grid.Column>
     <Grid.Column width={8}>
       <h2 style={bigTextNavigationStyle}>
-        Affirm
+        Navigation
         <div style={divBarStyle}></div>
 
         <h2 style = {smallTextStyle}>
-        Get a reminder and affirmations
-        <br/>
-        yourself that you are what
-        <br/>
-        you want to become
+        *Title*
         </h2>
-
     </h2>
-      <div style={spacerDiv}></div>
     </Grid.Column>
   </Grid>
 
@@ -584,7 +490,7 @@ gubergren.
   <Grid.Column width={2}></Grid.Column>
   <Grid.Column width={8}>
     <h1 style={hugeBgTextStyleNavigation}>
-      Affirm
+      Navigation
     </h1>
   </Grid.Column>
   </Grid>
@@ -602,26 +508,37 @@ gubergren.
 
   <div class="eight wide column">
 
-  <h2 style={smallTextStyleFloatLeft}>
+  <h2 style={smallTextStyleFloatRight}>
   Lorem ipsum dolor sit amet, consetetur <br/>
   sadipscing elitr, sed diam nonumy <br/>
   eirmod tempor invidunt ut labore et <br/>
   dolore magna aliquyam erat.
   <br/>
   <br/>
-  At vero eos et accusam et justo duo <br/>
-  dolores et ea rebum. Stet clita kasd <br/>
-  gubergren.
+  <br/>
+  <br/>
   </h2>
 
-
+      <img src={image} style={cardImageStyleTwoSmall}/>
   </div>
 
   </Grid.Column>
   <Grid.Column width={8}>
 
   <div class="four wide column">
-        <img src={image} style={cardImageStyleTall}/>
+
+        <img src={image} style={cardImageStyleTwoSmall}/>
+
+        <h2 style={smallTextStyleFloat}>
+        <br/>
+        <br/>
+        <br/>
+        Lorem ipsum dolor sit amet, consetetur <br/>
+        sadipscing elitr, sed diam nonumy <br/>
+        eirmod tempor invidunt ut labore et <br/>
+        dolore magna aliquyam erat.
+        </h2>
+
   </div>
 
   </Grid.Column>
@@ -635,17 +552,20 @@ gubergren.
   </Grid>
 
   <div style={spacerDiv}></div>
+  <div style={spacerDiv}></div>
+  <div style={spacerDiv}></div>
 
   <Grid style = {gridStyle}>
     <Grid.Column width={4}></Grid.Column>
     <Grid.Column width={8}>
-      <h2 style={bigTextAffirmateStyle}>
-        AffirMate
+      <h2 style={bigTextNavigationStyle}>
+        *Name*
         <div style={divBarStyle}></div>
 
         <h2 style = {smallTextStyle}>
-      Be who you want to be - Today!
-
+        A stylish and green way of
+        <br/>
+        transportation!
         </h2>
     </h2>
     </Grid.Column>
@@ -654,8 +574,8 @@ gubergren.
 <Grid>
 <Grid.Column width={2}></Grid.Column>
 <Grid.Column width={8}>
-  <h1 style={hugeBgTextStyleAffirmate}>
-    AffirMate
+  <h1 style={hugeBgTextStyleNavigation}>
+    *Name*
   </h1>
 </Grid.Column>
 </Grid>
@@ -681,5 +601,4 @@ gubergren.
 
 );
 }
-
 }

@@ -19,8 +19,9 @@ import Project1 from "../pages/Project1"
 //project2
 import Project2 from "../pages/Project2"
 //Project3
-//
+import Project3 from "../pages/Project3"
 //Project4
+//import Project4 from "../pages/Project4"
 
 //cv
 import CV from "../pages/CV"
@@ -71,6 +72,8 @@ export default class Layout extends React.Component {
                                 <Route exact path="/contact" component={Contact}/>
                                 <Route exact path="/project1" component={Project1}/>
                                 <Route exact path="/project2" component={Project2}/>
+                                <Route exact path="/project3" component={Project3}/>
+                                {/*<Route exact path="/project4" component={Project4}/>*/}
                             </div>
                         </div>
 

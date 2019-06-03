@@ -107,10 +107,10 @@ export default class Projects extends React.Component {
 
 
                 <div class="ui raised card" style={cardImageStyle}>
-                    <Link to={{ pathname: '/project2', state: 'flushdeal'}}> <img src={image} style={cardImageStyle}/> </Link>
+                      <Link to={{ pathname: '/project2', state: 'flushdeal'}}> <img src={image} style={cardImageStyle}/> </Link>
                 </div>
                 <div class="ui raised card" style={cardImageStyle}>
-                    <Link to="/"> <img src={image} style={cardImageStyle}/> </Link>
+                    <Link to={{ pathname: '/project3', state: 'flushdeal'}}> <img src={image} style={cardImageStyle}/> </Link>
                 </div>
                 <div class="ui raised card" style={cardImageStyle}>
                     <Link to="/"> <img src={image} style={cardImageStyle}/> </Link>
