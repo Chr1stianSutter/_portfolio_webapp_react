@@ -1,54 +1,38 @@
-import React from "react"
-import { HashRouter, Route } from 'react-router-dom';
-import { observer } from "mobx-react";
+import React from "react";
+import { Route, Switch } from 'react-router-dom';
+import { Grid } from "semantic-ui-react"
 
 import NavigationBar from "../components/NavigationBar"
+import HomePage from "../pages/HomePage";
+import AboutMe from "../pages/AboutMe"
+import Projects from "../pages/Projects"
+import Project1 from "../pages/Project1"
+import Project2 from "../pages/Project2"
+import Project3 from "../pages/Project3"
+import Vitae from "../pages/CV"
+import Contact from "../pages/Contact"
 
-import MobxInteraction from "../pages/MobxInteraction"
-import TextFromRestCall from "../pages/TextFromRestCall"
-import Cars from "../pages/Cars"
-
-import { Segment } from 'semantic-ui-react'
-
-// der Store
-import restTextStore from "../stores/restTextStore"
-
-// Require scss files
-require('../../stylesheets/_all.scss');
-
-// require LESS files
-require('../../stylesheets/initial.less');
-
-// name: '[path][name].[ext]?[hash:8]',
-
-
-
-// durch die Annotation @observer
-@observer
 export default class Layout extends React.Component {
     render() {
-
-        const containerStyle = {
-            marginTop: "5px"
-        };
-
+      const navigationBarSpacing = {
+        marginTop: "130px"
+      }
         return (
-            <HashRouter>
-                <div>
-                    <Segment><h1>Die interaktive Hasen-und Auto WebApp mit MobX.</h1></Segment>
-                    <NavigationBar location={location}/>
-                    <div class="container" style={containerStyle}>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <Route exact path="/mobxinteraction" component={MobxInteraction}/>
-                                <Route exact path="/textfromrestcall" component={TextFromRestCall}/>
-                                <Route exact path="/cars" component={Cars}/>
-                                <Route exact path="/tabletest" component={TableTest}/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </HashRouter>
+          <div>
+            <NavigationBar location={location} />
+              <div style={navigationBarSpacing}>
+                <Switch>
+                  <Route exact path="/" component={HomePage}/>
+                  <Route exact path="/aboutme" component={AboutMe}/>
+                  <Route exact path="/projects" component={Projects}/>
+                  <Route exact path="/cv" component={Vitae}/>
+                  <Route exact path="/contact" component={Contact}/>
+                  <Route exact path="/project1" component={Project1}/>
+                  <Route exact path="/project2" component={Project2}/>
+                  <Route exact path="/project3" component={Project3}/>
+                </Switch>
+              </div>
+          </div>
         );
     }
 }

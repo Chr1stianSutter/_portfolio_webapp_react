@@ -1,7 +1,8 @@
 import React from "react"
 import ReactDOM from "react-dom"
+import {HashRouter} from "react-router-dom"
 
-import Layout from "./pages/LandingPage"
+import Layout from "./pages/Layout"
 
 
 // Integration von Semantic UI
@@ -16,5 +17,7 @@ import 'semantic-ui-css/semantic.min.css'
 const app = document.getElementById('app');
 
 ReactDOM.render(
-        <Layout />,
+        <HashRouter>
+          <Layout />
+        </HashRouter>,
     app);

@@ -5,21 +5,15 @@ import Blackground from "../res/black3.jpg";
 export default class AboutMe extends React.Component {
   render() {
     const background ={
-      backgroundColor:'black'
+      backgroundColor: 'black'
     };
 
     const textStyle = {
-      position: 'absolute',
-      marginLeft:"12%",
-      marginTop:"5%",
       color:"white"
 
     };
 
     const textStyleGrid = {
-      position: 'absolute',
-      marginLeft:"12%",
-      marginTop:"15%",
       color: "white"
 
     };
