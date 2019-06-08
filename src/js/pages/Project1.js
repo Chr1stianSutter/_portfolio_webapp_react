@@ -223,7 +223,7 @@ export default class Project1 extends React.Component {
                 </h2>
               </h1>
               <img src={image} style={cardImageStyle}/>
-              <div style={spacerDiv}></div>
+              {/*<div style={spacerDiv} />*/}
             </div>
 
             <Grid.Column>
@@ -438,9 +438,9 @@ export default class Project1 extends React.Component {
             <div class="column"></div>
           </Grid.Column>
         </Grid>
-        <div style={spacerDiv} />
-        <div style={spacerDiv} />
-        <div style={spacerDiv} />
+        {/*<div style={spacerDiv} />*/}
+        {/*<div style={spacerDiv} />*/}
+        {/*<div style={spacerDiv} />*/}
         <Grid>
           <Grid.Column width={4} />
           <Grid.Column width={8} style = {gridStyle}>
@@ -490,9 +490,9 @@ export default class Project1 extends React.Component {
             </h1>
           </Grid.Column>
         </Grid>
-        <div style={spacerDiv}></div>
-        <div style={spacerDiv}></div>
-        <div style={spacerDiv}></div>
+        {/*<div style={spacerDiv} />*/}
+        {/*<div style={spacerDiv} />*/}
+        {/*<div style={spacerDiv} />*/}
 
         <Grid style = {gridStyle}>
           <Grid.Column width={4} />

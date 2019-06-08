@@ -199,7 +199,7 @@ export default class Project2 extends React.Component {
     };
 
     const wrapperStyle = {
-      //width: "100%",
+      width: "100%",
     }
     const ulSyle = {
       direction:"rtl"
@@ -441,8 +441,8 @@ export default class Project2 extends React.Component {
         <div class="column" />
       </Grid.Column>
       </Grid>
-        <div style={spacerDiv}></div>
-        <div style={spacerDiv}></div>
+      {/*<div style={spacerDiv} />*/}
+      {/*<div style={spacerDiv} />*/}
         <Grid>
           <Grid.Column width={4} />
           <Grid.Column width={8} style = {gridStyle}>
@@ -483,11 +483,11 @@ export default class Project2 extends React.Component {
             </h1>
           </Grid.Column>
         </Grid>
-        <div style={spacerDiv}></div>
-        <div style={spacerDiv}></div>
-        <div style={spacerDiv}></div>
-        <div style={spacerDiv}></div>
-        <div style={spacerDiv}></div>
+        {/*<div style={spacerDiv} />*/}
+        {/*<div style={spacerDiv} />*/}
+        {/*<div style={spacerDiv} />*/}
+        {/*<div style={spacerDiv} />*/}
+        {/*<div style={spacerDiv} />*/}
         <Grid style = {gridStyle}>
           <Grid.Column width={4} />
           <Grid.Column width={8}>
@@ -500,7 +500,7 @@ export default class Project2 extends React.Component {
                 {"you want to become"}
               </h2>
             </h2>
-            <div style={spacerDiv} />
+            {/*<div style={spacerDiv} />*/}
           </Grid.Column>
         </Grid>
 
