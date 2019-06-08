@@ -14,12 +14,7 @@ export default class NavigationBar extends Component {
   }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-
-  //$('.ui .item').on('click', function() {
-  //$('.ui .item').removeClass('active');
-  //$(this).addClass('active');
-  //});
-
+  
   render() {
     const { activeItem } = this.state
 
@@ -74,7 +69,7 @@ export default class NavigationBar extends Component {
           active={activeItem === 'AboutMe'}
           onClick={this.handleItemClick}
           style={menuStyle}>
-            ABOUT ME
+            {"ABOUT ME"}
           </Menu.Item>
 
           <Menu.Item
@@ -83,7 +78,7 @@ export default class NavigationBar extends Component {
           active={activeItem === 'Projects'}
           onClick={this.handleItemClick}
           style={menuStyle}>
-            PROJECTS
+            {"PROJECTS"}
           </Menu.Item>
 
           <Menu.Item
@@ -92,7 +87,7 @@ export default class NavigationBar extends Component {
           active={activeItem === 'Vitae'}
           onClick={this.handleItemClick}
           style={menuStyle}>
-            CV
+            {"CV"}
           </Menu.Item>
 
           <Menu.Item
@@ -101,7 +96,7 @@ export default class NavigationBar extends Component {
           active={activeItem === 'MenuContact'}
           onClick={this.handleItemClick}
           style={menuStyle}>
-            CONTACT
+            {"CONTACT"}
           </Menu.Item>
 
         </Menu>

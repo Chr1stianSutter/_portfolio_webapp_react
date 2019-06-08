@@ -7,21 +7,21 @@ export default class Layout extends React.Component {
   render() {
 
     const backgroundStyle = {
-      height: "100%",
-      position: "fixed",
-      backgroundPosition: "center",
+      //height: "100%",
+      //position: "fixed",
+      //backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover"
     };
 
     const textStyle = {
-      marginLeft:"35%",
-      marginTop:"5%",
+      //marginLeft:"35%",
+      //marginTop:"5%",
 
     };
 
     const myNameStyle={
-      fontSize:"90pt",
+      //fontSize:"90pt",
       fontFamily: 'Montserrat',
       textTransform:"uppercase",
       lineHeight:"0.9em"
@@ -29,14 +29,14 @@ export default class Layout extends React.Component {
 
     const smallTextStyle ={
       fontFamily: 'Montserrat',
-      fontSize:"25pt"
+      //fontSize:"25pt"
     };
 
     const divBarStyle = {
       height:"10px",
       width:"150px",
-      marginTop: "30px",
-      marginBottom:"25px",
+      //marginTop: "30px",
+      //marginBottom:"25px",
       backgroundColor:'black'
     }
     const contentWrapper = {
