@@ -1,8 +1,7 @@
 import React from "react";
 import { Grid } from 'semantic-ui-react'
-import Blackground from "../res/black3.jpg";
 import { withRouter } from "react-router";
-import image from '../res/image.jpg';
+import image from '../../static/image.jpg';
 
 export default class Project2 extends React.Component {
 

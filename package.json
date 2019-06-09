@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --config webpack.config.debug.js --content-base dev --inline --hot",
     "portfolio": "webpack-dev-server --content-base dev --host 192.168.0.234 --port 8080  --hot",
-    "portfolio-hs": "webpack-dev-server --config webpack.config.debug.js --content-base dev --port 8080 --hot",
+    "portfolio-hs": "webpack-dev-server --config webpack.config.debug.js --content-base dev --port 8080 --hot --open",
     "anna": "webpack-dev-server --content-base dev --host 192.168.178.1 --port 8080  --hot",
     "build:prod": "webpack -p --progress --config webpack.config.js",
     "build:dev": "webpack --config webpack.config.debug.js",

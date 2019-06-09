@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Segment, Card} from 'semantic-ui-react'
-import image from '../res/image.jpg';
+import image from '../../static/image.jpg';
 
 export default class Project1 extends React.Component {
   render() {

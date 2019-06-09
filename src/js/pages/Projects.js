@@ -1,7 +1,7 @@
 import React from "react"
 import { Grid, Card } from 'semantic-ui-react'
 import {Link} from "react-router-dom"
-import placeholder from '../res/image.jpg'
+import placeholder from '../../static/image.jpg'
 
 export default class Projects extends React.Component {
 
@@ -42,38 +42,40 @@ export default class Projects extends React.Component {
     }
 
     return (
-      <Grid>
-        <Grid.Row>
-          <Grid.Column>
-            <h2 style={smallTextStyle}>
-              {"Christian Sutter"}
-            </h2>
-            <h1 style={myNameStyle}>
-              {"PROJECTS"}
-            </h1>
-            <div style={divBarStyle}></div>
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Card.Group itemsPerRow={3}>
-            <Card raised>
-              <Link to="/project1">
-                <img src={placeholder} alt="placeholder" style={imageInCards} />
-              </Link>
-            </Card>
-            <Card raised>
-              <Link to="/project2">
-                <img src={placeholder} alt="placeholder" style={imageInCards} />
-              </Link>
-            </Card>
-            <Card raised>
-              <Link to="/project3">
-                <img src={placeholder} alt="placeholder" style={imageInCards} />
-              </Link>
-            </Card>
-          </Card.Group>
-        </Grid.Row>
-      </Grid>
+      <div id="__projects" className="page">
+        <Grid>
+          <Grid.Row>
+            <Grid.Column>
+              <h2 style={smallTextStyle}>
+                {"Christian Sutter"}
+              </h2>
+              <h1 style={myNameStyle}>
+                {"PROJECTS"}
+              </h1>
+              <div style={divBarStyle}></div>
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Card.Group itemsPerRow={3}>
+              <Card raised>
+                <Link to="/project1">
+                  <img src={placeholder} alt="placeholder" style={imageInCards} />
+                </Link>
+              </Card>
+              <Card raised>
+                <Link to="/project2">
+                  <img src={placeholder} alt="placeholder" style={imageInCards} />
+                </Link>
+              </Card>
+              <Card raised>
+                <Link to="/project3">
+                  <img src={placeholder} alt="placeholder" style={imageInCards} />
+                </Link>
+              </Card>
+            </Card.Group>
+          </Grid.Row>
+        </Grid>
+      </div>
     );
   }
 }

@@ -17,7 +17,7 @@ import 'semantic-ui-css/semantic.min.css'
 const app = document.getElementById('app');
 
 ReactDOM.render(
-        <HashRouter>
-          <Layout />
-        </HashRouter>,
-    app);
+    <HashRouter>
+      <Layout />
+    </HashRouter>,
+app);

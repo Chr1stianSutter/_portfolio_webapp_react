@@ -1,19 +1,11 @@
 import React from "react";
 import { HashRouter, Route } from 'react-router-dom';
-import Background from "../res/bg.jpg";
-import Logo from "../res/logo.jpg";
+import Logo from "../../../static/logo.jpg";
+
+import "./style.scss"
 
 export default class Layout extends React.Component {
   render() {
-
-    const backgroundStyle = {
-      //height: "100%",
-      //position: "fixed",
-      //backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "cover"
-    };
-
     const textStyle = {
       //marginLeft:"35%",
       //marginTop:"5%",
@@ -45,8 +37,7 @@ export default class Layout extends React.Component {
     }
 
     return (
-      <div>
-        <img src={Background} style={backgroundStyle} />
+      <div id="__homePage" className="page">
         <div style={textStyle, contentWrapper}>
           <h2 style={smallTextStyle}>{"Hello I'm"}</h2>
           <h1 style={myNameStyle}>

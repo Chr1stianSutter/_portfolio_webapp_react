@@ -1,6 +1,5 @@
 import React from "react";
 import { Grid } from 'semantic-ui-react'
-import Blackground from "../res/black3.jpg";
 
 export default class CV extends React.Component {
   render() {
@@ -64,7 +63,6 @@ export default class CV extends React.Component {
     return (
 
       <div >
-        <img src= {Blackground} style={backgroundStyle}/>
         <Grid>
           <Grid.Row>
             <div style={textStyle}>

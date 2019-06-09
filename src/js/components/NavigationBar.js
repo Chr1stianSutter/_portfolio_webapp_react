@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Menu } from 'semantic-ui-react'
 import { Link } from "react-router-dom";
-import Logo from "../res/logo.jpg";
+import Logo from "../../static/logo.jpg";
 import ClassNames from "classnames";
 
 export default class NavigationBar extends Component {
