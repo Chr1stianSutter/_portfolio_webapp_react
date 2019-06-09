@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, Segment, Card} from 'semantic-ui-react'
 import image from '../../../../static/image.jpg';
 
+import ShadowText from "../../../components/ShadowText/ShadowText"
 import "./style.scss"
 
 export default class Project1 extends React.Component {
@@ -10,15 +11,18 @@ export default class Project1 extends React.Component {
       <div>
         <h2>{"Projects:"}</h2>
         <h1>{"SEGWAY UI"}</h1>
+        <div className= "divBarLight"></div>
         <blockquote>
           {"A tablet interface mounted on a segway to provide the user with a multitude of features"}
         </blockquote>
         <img src={image} />
-        <h1>{"*NAME*"}</h1>
+        <h2>{"*NAME*"}</h2>
+        <div className= "divBarLight"></div>
         <blockquote>
           {"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren."}
         </blockquote>
-        <h2>{"Style Guide"}</h2>
+        <ShadowText alignment="left">{"Style Guide"}</ShadowText>
+        <div className= "divBarLight"></div>
         <h2>{"Color"}</h2>
         <h2>{"Typefaces"}</h2>
         <h2>
@@ -33,13 +37,11 @@ export default class Project1 extends React.Component {
           {"abcdefghijklmnopqrstuvwxyz"}<br/>
           {"0123456789"}
         </h2>
-        <h1>
-          {"Style"}<br/>
-          {"Guide"}
-        </h1>
         <h2>
           {"Users"}
         </h2>
+          <div className= "divBarLight"></div>
+
         <h2>
           {"Needs"}
         </h2>
@@ -53,10 +55,9 @@ export default class Project1 extends React.Component {
         <blockquote>
           {"I want to make use of positive affirmations tofurther my growth!"}
         </blockquote>
-        <h1>{"Users"}</h1>
         <h2>{"Navigation"}</h2>
+        <div className= "divBarLight"></div>
         <h2>{"*Title*"}</h2>
-        <h1>{"Navigation"}</h1>
         <blockquote>
           {"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."}
         </blockquote>
@@ -66,6 +67,7 @@ export default class Project1 extends React.Component {
           {"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."}
         </blockquote>
         <h2>{"Music"}</h2>
+        <div className= "divBarLight"></div>
         <h2>{"Play your favorite songs!"}</h2>
         <img src={Image} />
         <blockquote>
@@ -75,10 +77,9 @@ export default class Project1 extends React.Component {
           {"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."}
         </blockquote>
         <img src={image} />
-        <h1>{"Music"}</h1>
         <h2>{"*Name*"}</h2>
+        <div className= "divBarLight"></div>
         <blockquote>{"A stylish and green way of transportation!"}</blockquote>
-        <h1>{"*Name*"}</h1>
         <img src={image} />
       </div>
     );

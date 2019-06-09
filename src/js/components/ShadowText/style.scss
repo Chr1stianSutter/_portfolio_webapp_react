@@ -1,0 +1,24 @@
+.__ShadowText {
+  position: relative;
+  &.right {
+    text-align: right;
+  }
+  &.center {
+    text-align: center;
+  }
+
+  h2 {
+    display: inline;
+    position: relative;
+    font-size: 90pt !important;
+    &::after {
+      content: attr(data-content);
+      font: inherit;
+      display: block;
+      position: absolute;
+      transform: scale(2.667) translateY(-43%);
+      opacity: 0.1;
+      letter-spacing: -0.1em;
+    }
+  }
+}
