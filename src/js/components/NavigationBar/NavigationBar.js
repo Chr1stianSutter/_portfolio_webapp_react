@@ -19,34 +19,6 @@ export default class NavigationBar extends Component {
 
   render() {
     const { activeItem } = this.state
-
-    const logoStyle = {
-    //  height: "80px",
-    //  width: "auto"
-    };
-
-    const menuStyle = {
-    //  paddingBottom: "40px",
-    //  textAlign: 'center',
-    //  fontFamily: 'Montserrat',
-    //  fontSize: '20px',
-
-
-    };
-
-    const contentWrapper = {
-    //  width: "1024px",
-    //  margin: "0 auto"
-    }
-
-    const sticky = {
-    //  position: "fixed",
-    //  top: "0",
-    //  left: "0",
-    //  right: "0",
-    //  height: "130px",
-    //  zIndex: "1000"
-    }
     return (
       <div class="ui inverted segment attached">
         <Menu class="ui inverted secondary pointing menu">
