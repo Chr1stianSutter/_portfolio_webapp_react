@@ -1,8 +1,66 @@
  /*
    Global Styles
  */
- .page {
-   margin-top: 130px;
-   height: calc(100vh - 130px);
- }
- 
+
+ $colorBackgroundDark: #1a1b1d;
+#app {
+  font-family: 'Montserrat' !important;
+
+  p, blockquote {
+    font-size: 1em;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 100%;
+    font-family: 'Montserrat' !important;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 90pt;
+    //font-family: 'Montserrat' !important;
+  }
+
+  h2{
+    font-size: 20pt;
+    line-height: 1em;
+  }
+
+   .page {
+     margin-top: 130px;
+     height: calc(100vh - 130px);
+     font-family: 'Montserrat';
+     h1 {}
+   }
+
+   .dark {
+     color: white;
+     background-color: $colorBackgroundDark;
+
+     h1 {}
+   }
+
+   .light {
+    color: black;
+    h1 {}
+   }
+
+   .divBarDark {
+     height: 10px;
+     width: 150px;
+     background-color: white;
+   }
+
+   .divBarLight {
+     height: 10px;
+     width:150px;
+     background-color: black;
+   }
+
+   .projects{
+     img {
+       width: 100%;
+       height: auto;
+       display: block;
+     }
+   }
+}

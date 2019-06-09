@@ -1,7 +1,9 @@
 import React from "react"
 import { Grid, Card } from 'semantic-ui-react'
 import {Link} from "react-router-dom"
-import placeholder from '../../static/image.jpg'
+import placeholder from '../../../static/image.jpg'
+
+import "./style.scss"
 
 export default class Projects extends React.Component {
 
@@ -14,62 +16,35 @@ export default class Projects extends React.Component {
 
   render() {
   const { activeItem } = this.state
-
-    const myNameStyle = {
-      fontSize: "90pt",
-      fontFamily: "Montserrat",
-      textTransform: "uppercase",
-      lineHeight: "0.9em"
-    }
-
-    const smallTextStyle = {
-      fontFamily: "Montserrat",
-      fontSize: "20pt"
-    }
-
-    const divBarStyle = {
-      height: "10px",
-      width: "150px",
-      marginTop: "30px",
-      marginBottom: "25px",
-      backgroundColor: "black"
-    }
-
-    const imageInCards = {
-      width: "100%",
-      height: "auto",
-      display: "block"
-    }
-
     return (
-      <div id="__projects" className="page">
+      <div id="__projects" className="page light projects">
         <Grid>
           <Grid.Row>
             <Grid.Column>
-              <h2 style={smallTextStyle}>
+              <h2>
                 {"Christian Sutter"}
               </h2>
-              <h1 style={myNameStyle}>
+              <h1>
                 {"PROJECTS"}
               </h1>
-              <div style={divBarStyle}></div>
+              <div className="divBarLight"></div>
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
             <Card.Group itemsPerRow={3}>
               <Card raised>
                 <Link to="/project1">
-                  <img src={placeholder} alt="placeholder" style={imageInCards} />
+                  <img src={placeholder} alt="placeholder" />
                 </Link>
               </Card>
               <Card raised>
                 <Link to="/project2">
-                  <img src={placeholder} alt="placeholder" style={imageInCards} />
+                  <img src={placeholder} alt="placeholder" />
                 </Link>
               </Card>
               <Card raised>
                 <Link to="/project3">
-                  <img src={placeholder} alt="placeholder" style={imageInCards} />
+                  <img src={placeholder} alt="placeholder" />
                 </Link>
               </Card>
             </Card.Group>

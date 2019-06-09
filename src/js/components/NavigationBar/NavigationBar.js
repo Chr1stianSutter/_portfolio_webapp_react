@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { Menu } from 'semantic-ui-react'
 import { Link } from "react-router-dom";
-import Logo from "../../static/logo.jpg";
+import Logo from "../../../static/logo.jpg";
 import ClassNames from "classnames";
+
+import "./style.scss"
 
 export default class NavigationBar extends Component {
 
@@ -14,53 +16,47 @@ export default class NavigationBar extends Component {
   }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-  
+
   render() {
     const { activeItem } = this.state
 
     const logoStyle = {
-      height: "80px",
-      width: "auto"
+    //  height: "80px",
+    //  width: "auto"
     };
 
     const menuStyle = {
-      paddingBottom: "40px",
-      textAlign: 'center',
-      fontFamily: 'Montserrat',
-      fontSize: '20px',
+    //  paddingBottom: "40px",
+    //  textAlign: 'center',
+    //  fontFamily: 'Montserrat',
+    //  fontSize: '20px',
+
 
     };
 
     const contentWrapper = {
-      width: "1024px",
-      margin: "0 auto"
+    //  width: "1024px",
+    //  margin: "0 auto"
     }
 
     const sticky = {
-      position: "fixed",
-      top: "0",
-      left: "0",
-      right: "0",
-      height: "130px"
+    //  position: "fixed",
+    //  top: "0",
+    //  left: "0",
+    //  right: "0",
+    //  height: "130px",
+    //  zIndex: "1000"
     }
-
-    const flexContainer = {
-      display: "flex",
-      justifyContent: "center"
-    }
-
-    const flexItem = {}
-
     return (
-      <div class="ui inverted segment" style={sticky}>
-        <Menu class="ui inverted secondary pointing menu" style={contentWrapper, flexContainer}>
+      <div class="ui inverted segment attached">
+        <Menu class="ui inverted secondary pointing menu">
 
           <Menu.Item
           as={Link} to='/'
           name='Home'
           active={activeItem === 'Home'}
           onClick={this.handleItemClick}>
-            <img src={Logo} style={logoStyle} alt="Home"/>
+            <img src={Logo} alt="Home"/>
           </Menu.Item>
 
           <Menu.Item
@@ -68,7 +64,7 @@ export default class NavigationBar extends Component {
           name='AboutMe'
           active={activeItem === 'AboutMe'}
           onClick={this.handleItemClick}
-          style={menuStyle}>
+          >
             {"ABOUT ME"}
           </Menu.Item>
 
@@ -77,7 +73,7 @@ export default class NavigationBar extends Component {
           name='Projects'
           active={activeItem === 'Projects'}
           onClick={this.handleItemClick}
-          style={menuStyle}>
+          >
             {"PROJECTS"}
           </Menu.Item>
 
@@ -86,7 +82,7 @@ export default class NavigationBar extends Component {
           name='Vitae'
           active={activeItem === 'Vitae'}
           onClick={this.handleItemClick}
-          style={menuStyle}>
+          >
             {"CV"}
           </Menu.Item>
 
@@ -95,7 +91,7 @@ export default class NavigationBar extends Component {
           name='Contact'
           active={activeItem === 'MenuContact'}
           onClick={this.handleItemClick}
-          style={menuStyle}>
+          >
             {"CONTACT"}
           </Menu.Item>
 

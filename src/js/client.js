@@ -2,7 +2,7 @@ import React from "react"
 import ReactDOM from "react-dom"
 import {HashRouter} from "react-router-dom"
 
-import Layout from "./pages/Layout"
+import Layout from "./pages/Layout/Layout.js"
 
 
 // Integration von Semantic UI

@@ -2,17 +2,19 @@ import React from "react";
 import { Route, Switch } from 'react-router-dom';
 import { Grid } from "semantic-ui-react"
 
-import "../../stylesheets/style.scss"
+import "../../../stylesheets/style.scss"
+import "./style.scss"
 
-import NavigationBar from "../components/NavigationBar"
-import HomePage from "../pages/HomePage/";
-import AboutMe from "../pages/AboutMe"
-import Projects from "../pages/Projects"
-import Project1 from "../pages/Project1"
-import Project2 from "../pages/Project2"
-import Project3 from "../pages/Project3"
-import Vitae from "../pages/Vitae"
-import Contact from "../pages/Contact"
+import NavigationBar from "../../components/NavigationBar/NavigationBar"
+
+import HomePage from "../../pages/HomePage/";
+import AboutMe from "../../pages/AboutMe/AboutMe"
+import Projects from "../../pages/Projects/Projects"
+import Project1 from "../../pages/Projects/Project1/Project1"
+import Project2 from "../../pages/Projects/Project2/Project2"
+import Project3 from "../../pages/Projects/Project3/Project3"
+import Vitae from "../../pages/Vitae/Vitae"
+import Contact from "../../pages/Contact/Contact"
 
 export default class Layout extends React.Component {
     render() {
