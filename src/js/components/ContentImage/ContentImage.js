@@ -13,7 +13,7 @@ export default class ContentImage extends Component {
     if(this.props.aspect == "landscape") {
       container.style.height = container.offsetWidth * 0.5625 + "px";
     }if(this.props.aspect == "portrait"){
-      container.style.height = container.offsetWidth * 1,7778 + "px";
+      container.style.height = container.offsetWidth * 1.7778 + "px";
     }if(this.props.aspect == "square"){
       container.style.height = container.offsetWidth
     }
@@ -21,16 +21,16 @@ export default class ContentImage extends Component {
 
 //<ContentImage aspect="landscape" src={image}>{"Bildbeschreibungstext für Screenreader"}</ContentImage>
   render() {
-    var classNames =  "__ContentImage"
-    if(this.props.aspect == "landscape") {
-      classNames += " landscape"
-    }
-    if(this.props.aspect == "portrait"){
-      classNames += " portrait"
-    }
-    if(this.props.aspect == "square"){
-      classNames += " square"
-    }
+    // var classNames =  "__ContentImage"
+    // if(this.props.aspect == "landscape") {
+    //   classNames += " landscape"
+    // }
+    // if(this.props.aspect == "portrait"){
+    //   classNames += " portrait"
+    // }
+    // if(this.props.aspect == "square"){
+    //   classNames += " square"
+    // }
 
     const bgImage = {
       backgroundImage: "url('" + this.props.img + "')"
