@@ -4,18 +4,27 @@ import image from '../../../../static/image.jpg';
 
 import ShadowText from "../../../components/ShadowText/ShadowText"
 import "./style.scss"
+import ContentImage from "../../../components//ContentImage/ContentImage"
 
 export default class Project1 extends React.Component {
   render() {
     return(
       <div>
-        <h2>{"Projects:"}</h2>
-        <h1>{"SEGWAY UI"}</h1>
-        <div className= "divBarLight"></div>
-        <blockquote>
-          {"A tablet interface mounted on a segway to provide the user with a multitude of features"}
-        </blockquote>
-        <img src={image} />
+        <Grid comulns="equal">
+          <Grid.Column width={3}></Grid.Column>
+          <Grid.Column width={10}>
+            <h2>{"Projects:"}</h2>
+            <h1>{"SEGWAY UI"}</h1>
+            <div className= "divBarLight"></div>
+            <blockquote>
+              {"A tablet interface mounted on a segway to provide the user with a multitude of features"}
+            </blockquote>
+            <ContentImage aspect="landscape" img={image} description="Bildbeschreibungstext für Screenreader"></ContentImage>
+          </Grid.Column>
+          <Grid.Column width ={3}></Grid.Column>
+        </Grid>
+
+
         <h2>{"*NAME*"}</h2>
         <div className= "divBarLight"></div>
         <blockquote>
@@ -69,7 +78,7 @@ export default class Project1 extends React.Component {
         <ShadowText alignment="right">{"Music"}</ShadowText>
         <div className= "divBarLight"></div>
         <h2>{"Play your favorite songs!"}</h2>
-        <img src={Image} />
+        <img src={image} />
         <blockquote>
           {"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."}
         </blockquote>
