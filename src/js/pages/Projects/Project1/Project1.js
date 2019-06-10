@@ -38,7 +38,7 @@ export default class Project1 extends React.Component {
           {"0123456789"}
         </h2>
         <h2>
-          {"Users"}
+        <ShadowText alignment="right">{"Users"}</ShadowText>
         </h2>
           <div className= "divBarLight"></div>
 
@@ -55,7 +55,7 @@ export default class Project1 extends React.Component {
         <blockquote>
           {"I want to make use of positive affirmations tofurther my growth!"}
         </blockquote>
-        <h2>{"Navigation"}</h2>
+        <ShadowText alignment="left">{"Navigation"}</ShadowText>
         <div className= "divBarLight"></div>
         <h2>{"*Title*"}</h2>
         <blockquote>
@@ -66,7 +66,7 @@ export default class Project1 extends React.Component {
         <blockquote>
           {"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."}
         </blockquote>
-        <h2>{"Music"}</h2>
+        <ShadowText alignment="right">{"Music"}</ShadowText>
         <div className= "divBarLight"></div>
         <h2>{"Play your favorite songs!"}</h2>
         <img src={Image} />
@@ -77,7 +77,7 @@ export default class Project1 extends React.Component {
           {"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."}
         </blockquote>
         <img src={image} />
-        <h2>{"*Name*"}</h2>
+        <ShadowText alignment="left">{"*Name*"}</ShadowText>
         <div className= "divBarLight"></div>
         <blockquote>{"A stylish and green way of transportation!"}</blockquote>
         <img src={image} />
