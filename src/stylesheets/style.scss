@@ -44,16 +44,42 @@
     h1 {}
    }
 
+   .right {
+     text-align: right;
+   }
+
+  @mixin divBar {
+    height: 22px;
+    width: 18%;
+    display: inline-block;
+    margin-top: 9px;
+    // transition-property: width;
+    // transition-timing-function: ease-out;;
+    // transition-duration: 175ms;
+  }
    .divBarDark {
-     height: 10px;
-     width: 150px;
+     @include divBar;
      background-color: white;
    }
 
    .divBarLight {
-     height: 10px;
-     width:150px;
+     @include divBar;
+     background-color: red;
+   }
+
+   .inset {
+     width: 150px;
+     height: 150px;
+     margin-right: 15px;
+     inline-style: block;
+     float: left;
+     shape-outside: inset(0px);
+     clip-path: inset(0px);
      background-color: black;
+   }
+
+   .ulRight {
+     direction: rtl;
    }
 
    .projects{

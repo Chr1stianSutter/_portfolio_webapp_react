@@ -9,20 +9,26 @@ export default class ShadowText extends Component {
   }
 
   render() {
+    var classNames = "__ShadowText";
+    if(this.props.alignment && this.props.alignment == "right") {
+      classNames += " right"
+    }else{
+      classNames += " left"
+    }
 
-    let shadowNode = (
-      (this.props.alignment && this.props.alignment == "right") ?
-            <div className="__ShadowText right">
-              <h2 data-content={this.props.children}>{this.props.children}</h2>
-            </div>
-        :
-          <div className="__ShadowText left">
-            <h2 data-content={this.props.children}>{this.props.children}</h2>
-          </div>
-      )
+    var divBar = false;
+    if(this.props.barStyle && this.props.barStyle == "light") {
+      var divBar = <div className="divBarLight"></div>;
+    }
+    if(this.props.barStyle && this.props.barStyle == "dark") {
+      var divBar = <div className="divBarDark"></div>;
+    }
 
     return (
-      shadowNode
+      <div className={classNames}>
+        <h2 data-content={this.props.children}>{this.props.children}</h2><br />
+        {(divBar)? divBar : ""}
+      </div>
     );
   }
 }
