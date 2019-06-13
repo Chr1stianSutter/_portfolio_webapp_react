@@ -98,42 +98,71 @@ export default class Project1 extends React.Component {
                   <li>{"test 3"}</li>
                   <li>{"test 4"}</li>
                 </ul>
+                <h2 className="right"> {"Motto"}</h2>
+                <blockquote>
+                  {"I want a vehicle that's A and B a reliable C that attracts attention"}
+                </blockquote>
               </Grid.Column>
             </Grid>
           </Grid.Column>
         </Grid>
 
+        <Grid columns="equal">
+          <Grid.Column width={2}></Grid.Column>
+          <Grid.Column width={12}>
+            <ShadowText alignment="left" barStyle="light">{"Navigation"}</ShadowText>
+            <h2 className="left">{"*Title*"}</h2>
+            <Grid columns="equal">
+              <Grid.Column>
+                <blockquote>
+                  {"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."}
+                </blockquote>
+                <ContentImage aspect="landscape" img={image} description="Bildbeschreibungstext für Screenreader"></ContentImage>
+              </Grid.Column>
+              <Grid.Column>
+                <ContentImage aspect="landscape" img={image} description="Bildbeschreibungstext für Screenreader"></ContentImage>
+                <blockquote>
+                  {"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."}
+                </blockquote>
+              </Grid.Column>
+            </Grid>
+          </Grid.Column>
+        </Grid>
 
-        <h2>{"Motto"}</h2>
-        <blockquote>
-          {"I want to make use of positive affirmations tofurther my growth!"}
-        </blockquote>
-        <ShadowText alignment="left">{"Navigation"}</ShadowText>
-        <div className= "divBarLight"></div>
-        <h2>{"*Title*"}</h2>
-        <blockquote>
-          {"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."}
-        </blockquote>
-        <img src={image} />
-        <img src={image}/>
-        <blockquote>
-          {"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."}
-        </blockquote>
-        <ShadowText alignment="right">{"Music"}</ShadowText>
-        <div className= "divBarLight"></div>
-        <h2>{"Play your favorite songs!"}</h2>
-        <img src={image} />
-        <blockquote>
-          {"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."}
-        </blockquote>
-        <blockquote>
-          {"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."}
-        </blockquote>
-        <img src={image} />
-        <ShadowText alignment="left">{"*Name*"}</ShadowText>
-        <div className= "divBarLight"></div>
-        <blockquote>{"A stylish and green way of transportation!"}</blockquote>
-        <img src={image} />
+        <Grid columns="equal">
+          <Grid.Column width={2}></Grid.Column>
+          <Grid.Column width={12}>
+            <ShadowText alignment="right" barStyle="light">{"Music"}</ShadowText>
+            <h2 className="right">{"Play your favourite songs!"}</h2>
+            <Grid columns="equal">
+              <Grid.Column>
+                <ContentImage aspect="landscape" img={image} description="Bildbeschreibungstext für Screenreader"></ContentImage>
+                <blockquote>
+                  {"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."}
+                </blockquote>
+              </Grid.Column>
+              <Grid.Column>
+                <blockquote>
+                  {"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."}
+                </blockquote>
+                <ContentImage aspect="landscape" img={image} description="Bildbeschreibungstext für Screenreader"></ContentImage>
+              </Grid.Column>
+            </Grid>
+          </Grid.Column>
+        </Grid>
+
+        <Grid comulns="equal">
+          <Grid.Column width={2}></Grid.Column>
+          <Grid.Column width={12}>
+            <h1>{"*Name*"}</h1>
+            <div className= "divBarLight"></div>
+            <blockquote>
+              {"A stylish and green way of transportation!"}
+            </blockquote>
+            <ContentImage aspect="landscape" img={image} description="Bildbeschreibungstext für Screenreader"></ContentImage>
+          </Grid.Column>
+          <Grid.Column width ={2}></Grid.Column>
+        </Grid>
       </div>
     );
   }
