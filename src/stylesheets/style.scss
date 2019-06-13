@@ -6,12 +6,15 @@
 #app {
   font-family: 'Montserrat' !important;
 
-  p, blockquote {
-    font-size: 1em;
+  p, blockquote, li {
+    font-size: 20pt;
+    line-height: 150%;
+
   }
   h1, h2, h3, h4, h5, h6 {
     line-height: 100%;
     font-family: 'Montserrat' !important;
+    margin-top: 20px;
   }
 
   h1 {
@@ -52,10 +55,11 @@
     height: 22px;
     width: 18%;
     display: inline-block;
-    margin-top: 9px;
-    // transition-property: width;
-    // transition-timing-function: ease-out;;
-    // transition-duration: 175ms;
+    //margin-top: 9px;
+    margin-top: 15px;
+    transition-property: width;
+    transition-timing-function: ease-out;;
+    transition-duration: 150ms;
   }
    .divBarDark {
      @include divBar;

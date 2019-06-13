@@ -17,9 +17,9 @@ export default class Project1 extends React.Component {
             <h2>{"Projects:"}</h2>
             <h1>{"SEGWAY UI"}</h1>
             <div className= "divBarLight"></div>
-            <blockquote>
+            <p>
               {"A tablet interface mounted on a segway to provide the user with a multitude of features"}
-            </blockquote>
+            </p>
             <ContentImage aspect="landscape" img={image} description="Bildbeschreibungstext für Screenreader"></ContentImage>
           </Grid.Column>
           <Grid.Column width ={2}></Grid.Column>
@@ -44,8 +44,7 @@ export default class Project1 extends React.Component {
         <Grid columns="equal">
           <Grid.Column width={2}></Grid.Column>
           <Grid.Column width={12}>
-            <ShadowText alignment="left">{"Style Guide"}</ShadowText>
-            <div className= "divBarLight"></div>
+            <ShadowText alignment="left" barStyle="light">{"Style Guide"}</ShadowText>
             <h2>{"Color"}</h2>
             <div className="inset"></div>
             <div className="inset"></div>
@@ -58,12 +57,12 @@ export default class Project1 extends React.Component {
               <Grid.Row>
                 <h2>{"Typeface A:"}</h2>
               </Grid.Row>
-                <h2>
+                <p>
                   {"Futura - Bold"}
                   {"ABCDEFGHIJKLMNOPQRSTUVWXYZ"}<br/>
                   {"abcdefghijklmnopqrstuvwxyz"}<br/>
                   {"0123456789"}
-                </h2>
+                </p>
               </Grid.Column>
               <Grid.Column>
               <Grid.Row>
@@ -71,12 +70,12 @@ export default class Project1 extends React.Component {
                 <h2>{"Typeface B:"}</h2>
               </Grid.Row>
               </Grid.Row>
-                <h2>
+                <p>
                   {"Helvetica - Regular"}
                   {"ABCDEFGHIJKLMNOPQRSTUVWXYZ"}<br/>
                   {"abcdefghijklmnopqrstuvwxyz"}<br/>
                   {"0123456789"}
-                </h2>
+                </p>
               </Grid.Column>
             </Grid>
           </Grid.Column>
@@ -114,16 +113,16 @@ export default class Project1 extends React.Component {
             <h2 className="left">{"*Title*"}</h2>
             <Grid columns="equal">
               <Grid.Column>
-                <blockquote>
+                <p>
                   {"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."}
-                </blockquote>
+                </p>
                 <ContentImage aspect="landscape" img={image} description="Bildbeschreibungstext für Screenreader"></ContentImage>
               </Grid.Column>
               <Grid.Column>
                 <ContentImage aspect="landscape" img={image} description="Bildbeschreibungstext für Screenreader"></ContentImage>
-                <blockquote>
+                <p>
                   {"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."}
-                </blockquote>
+                </p>
               </Grid.Column>
             </Grid>
           </Grid.Column>
@@ -137,14 +136,14 @@ export default class Project1 extends React.Component {
             <Grid columns="equal">
               <Grid.Column>
                 <ContentImage aspect="landscape" img={image} description="Bildbeschreibungstext für Screenreader"></ContentImage>
-                <blockquote>
+                <p>
                   {"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."}
-                </blockquote>
+                </p>
               </Grid.Column>
               <Grid.Column>
-                <blockquote>
+                <p>
                   {"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."}
-                </blockquote>
+                </p>
                 <ContentImage aspect="landscape" img={image} description="Bildbeschreibungstext für Screenreader"></ContentImage>
               </Grid.Column>
             </Grid>
@@ -154,11 +153,10 @@ export default class Project1 extends React.Component {
         <Grid comulns="equal">
           <Grid.Column width={2}></Grid.Column>
           <Grid.Column width={12}>
-            <h1>{"*Name*"}</h1>
-            <div className= "divBarLight"></div>
-            <blockquote>
+            <ShadowText alignment="left" barStyle="light">{"*Name*"}</ShadowText>
+            <p>
               {"A stylish and green way of transportation!"}
-            </blockquote>
+            </p>
             <ContentImage aspect="landscape" img={image} description="Bildbeschreibungstext für Screenreader"></ContentImage>
           </Grid.Column>
           <Grid.Column width ={2}></Grid.Column>
