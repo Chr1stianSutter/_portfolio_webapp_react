@@ -15,8 +15,9 @@ export default class Project1 extends React.Component {
           <Grid.Column width={2}></Grid.Column>
           <Grid.Column width={12}>
             <h2>{"Projects:"}</h2>
-            <h1>{"SEGWAY UI"}</h1>
-            <div className= "divBarLight"></div>
+            {/*<h1>{"SEGWAY UI"}</h1>*/}
+            <ShadowText alignment="left" barStyle="light">{"SEGWAY UI"}</ShadowText>
+            {/*<div className= "divBarLight"></div>*/}
             <p>
               {"A tablet interface mounted on a segway to provide the user with a multitude of features"}
             </p>
@@ -32,8 +33,9 @@ export default class Project1 extends React.Component {
             <ContentImage aspect="square" img={image} description="Bildbeschreibungstext für Screenreader"></ContentImage>
           </Grid.Column>
           <Grid.Column width={6}>
-            <h1>{"*NAME*"}</h1>
-            <div className= "divBarLight"></div>
+            {/*<h1>{"*NAME*"}</h1>*/}
+            {/*<div className= "divBarLight"></div>*/}
+            <ShadowText alignment="left" barStyle="light">{"*Name*"}</ShadowText>
             <p>
               {"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren."}
             </p>
@@ -154,9 +156,9 @@ export default class Project1 extends React.Component {
           <Grid.Column width={2}></Grid.Column>
           <Grid.Column width={12}>
             <ShadowText alignment="left" barStyle="light">{"*Name*"}</ShadowText>
-            <p>
+            <h2>
               {"A stylish and green way of transportation!"}
-            </p>
+            </h2>
             <ContentImage aspect="landscape" img={image} description="Bildbeschreibungstext für Screenreader"></ContentImage>
           </Grid.Column>
           <Grid.Column width ={2}></Grid.Column>
