@@ -7,6 +7,11 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div className="page light">
+
+
+      <Grid comulns="equal">
+        <Grid.Column width={2}></Grid.Column>
+        <Grid.Column width={12}>
         <Grid>
           <Grid.Row>
             <div>
@@ -31,6 +36,9 @@ export default class Contact extends React.Component {
             </div>
           </Grid.Column>
         </Grid.Row>
+      </Grid>
+        </Grid.Column>
+        <Grid.Column width ={2}></Grid.Column>
       </Grid>
       </div>
     );
