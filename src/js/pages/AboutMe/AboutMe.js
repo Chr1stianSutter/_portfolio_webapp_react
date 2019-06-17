@@ -57,7 +57,6 @@ export default class AboutMe extends React.Component {
         </Grid.Column>
         <Grid.Column width ={2}></Grid.Column>
       </Grid>
-
       </div>
     );
   }

@@ -3,13 +3,27 @@
 */
 
 .logo {
-  height: 80px;
-  width: auto;
+  height: 100px !important;
+  width: 100px !important;
+  //padding-left: 0px !important;
 }
 
 .menu {
-  //padding-bottom: 40px;
+  //padding-bottom: 20px;
   text-align: center;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 24px !important;
+  height: 100px;
+}
+
+.menuItem {
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  //margin-right: 80px !important;
+  padding-bottom: 30px !important;
+
+}
+
+.menuBar{
+  height: 130px;
 }

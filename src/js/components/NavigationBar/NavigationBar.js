@@ -3,6 +3,7 @@ import { Menu } from 'semantic-ui-react'
 import { Link } from "react-router-dom";
 import Logo from "../../../static/logo.jpg";
 import ClassNames from "classnames";
+import { Grid, Segment, Card} from 'semantic-ui-react'
 
 import "./style.scss"
 
@@ -20,20 +21,30 @@ export default class NavigationBar extends Component {
   render() {
     const { activeItem } = this.state
     return (
-      <div class="ui inverted segment attached">
+      <div class="ui inverted segment attached menuBar">
+      <Grid comulns="equal">
+        <Grid.Column width={2}>
         <Menu class="ui inverted secondary pointing menu">
 
           <Menu.Item
           as={Link} to='/'
           name='Home'
-          active={activeItem === 'Home'}
+          className="logo"
           onClick={this.handleItemClick}>
-            <img src={Logo} alt="Home"/>
+            <img src={Logo} className="logo" alt="Home"/>
           </Menu.Item>
+
+        </Menu>
+
+        </Grid.Column>
+        <Grid.Column width={12}>
+
+        <Menu class="ui inverted secondary pointing menu">
 
           <Menu.Item
           as={Link} to='/aboutme'
           name='AboutMe'
+          className="menuItem"
           active={activeItem === 'AboutMe'}
           onClick={this.handleItemClick}
           >
@@ -43,6 +54,7 @@ export default class NavigationBar extends Component {
           <Menu.Item
           as={Link} to='/projects'
           name='Projects'
+          className="menuItem"
           active={activeItem === 'Projects'}
           onClick={this.handleItemClick}
           >
@@ -52,6 +64,7 @@ export default class NavigationBar extends Component {
           <Menu.Item
           as={Link} to='/cv'
           name='Vitae'
+          className="menuItem"
           active={activeItem === 'Vitae'}
           onClick={this.handleItemClick}
           >
@@ -61,13 +74,18 @@ export default class NavigationBar extends Component {
           <Menu.Item
           as={Link} to='/contact'
           name='Contact'
-          active={activeItem === 'MenuContact'}
+          className="menuItem"
+          active={activeItem === 'Contact'}
           onClick={this.handleItemClick}
           >
             {"CONTACT"}
           </Menu.Item>
 
         </Menu>
+
+        </Grid.Column>
+        <Grid.Column width={2}></Grid.Column>
+      </Grid>
       </div>
     )
   }

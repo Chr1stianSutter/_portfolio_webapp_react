@@ -12,7 +12,7 @@ export default class Layout extends React.Component {
       <Grid comulns="equal">
         <Grid.Column width={6}></Grid.Column>
         <Grid.Column width={8}>
-        <div>
+        <div className="text">
           <h2>{"Hello I'm"}</h2>
           <h1>
             {"Christian"}<br/>
@@ -27,9 +27,6 @@ export default class Layout extends React.Component {
         </Grid.Column>
         <Grid.Column width={2}></Grid.Column>
       </Grid>
-
-
-
       </div>
     );
   }
