@@ -4,7 +4,8 @@ import image from '../../../../static/image.jpg';
 
 import ShadowText from "../../../components/ShadowText/ShadowText"
 import "./style.scss"
-import ContentImage from "../../../components//ContentImage/ContentImage"
+import ContentImage from "../../../components/ContentImage/ContentImage"
+import CommentsFunction from "../../../components/CommentFunction/CommentsFunction"
 
 export default class Project1 extends React.Component {
   render() {
@@ -162,6 +163,22 @@ export default class Project1 extends React.Component {
             <ContentImage aspect="landscape" img={image} description="Bildbeschreibungstext für Screenreader"></ContentImage>
           </Grid.Column>
           <Grid.Column width ={2}></Grid.Column>
+        </Grid>
+
+        <Grid>
+         <Grid.Column width={16}>
+          <div class="ui divider"></div>
+         </Grid.Column>
+        </Grid>
+
+        <Grid columns="equal">
+        <Grid.Column width ={5}></Grid.Column>
+          <Grid.Column width ={6}>
+
+            <CommentsFunction></CommentsFunction>
+
+          </Grid.Column>
+          <Grid.Column width ={5}></Grid.Column>
         </Grid>
       </div>
     );
