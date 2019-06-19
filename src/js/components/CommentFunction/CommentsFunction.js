@@ -59,8 +59,8 @@ export default class CommentsFunction extends Component {
         <div class="field">
           <textarea></textarea>
         </div>
-        <div class="ui primary submit labeled icon button">
-          <i class="icon edit"></i> Add Comment
+        <div class="ui red inverted submit button">
+           Add Comment
         </div>
       </form>
     </div>

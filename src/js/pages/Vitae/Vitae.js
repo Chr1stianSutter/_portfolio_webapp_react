@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from 'semantic-ui-react'
+import { Grid , Button} from 'semantic-ui-react'
 
 import "./style.scss"
 
@@ -34,10 +34,9 @@ export default class CV extends React.Component {
                 <h2>
                   {"Here you go:"}
                 </h2>
-                <h2>
-                  {"Curriculum Vitae"}
-                </h2>
-                <div className="divBarDarkCVUnderline"/>
+                <div>
+                  <button class="ui inverted red button">Download Curriculum Vitae</button>
+                </div>
               </div>
             </Grid.Column>
           </Grid.Row>

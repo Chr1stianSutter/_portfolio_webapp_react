@@ -57,7 +57,7 @@
     width: 18%;
     display: inline-block;
     //margin-top: 9px;
-    margin-top: 80px;
+    margin-top: 40px;
     transition-property: width;
     transition-timing-function: ease-out;;
     transition-duration: 150ms;
@@ -69,7 +69,7 @@
 
    .divBarLight {
      @include divBar;
-     background-color: red;
+     background-color: black;
    }
 
    .inset {
