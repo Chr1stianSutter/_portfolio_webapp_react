@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from 'semantic-ui-react'
+import { Grid, Button } from 'semantic-ui-react'
 
 import "./style.scss"
 
@@ -33,10 +33,9 @@ export default class AboutMe extends React.Component {
                     {"media design, you can check them"}<br/>
                     {"out here:"}
                   </h2>
-                  <h2>
-                    {"digitalmediadesign.io"}
-                  </h2>
-                  <div className="divBarDarkUnderline"></div>
+                  <div>
+                    <button class="ui inverted red button">digitalmediadesign.io</button>
+                  </div>
                 </div>
               </Grid.Column>
               <Grid.Column width={8}>
