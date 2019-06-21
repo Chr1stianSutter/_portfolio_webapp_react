@@ -50,18 +50,15 @@ export default class Contact extends React.Component {
                           <Grid.Row>
                             <div class="equal width fields">
                               <div class="field">
-                                <label>First name</label>
                                 <div class="ui fluid input"><input type="text" placeholder="First name" /></div>
                               </div>
                               <div class="field">
-                                <label>Email adress</label>
                                 <div class="ui fluid input"><input type="text" placeholder="Email adress" /></div>
                               </div>
                             </div>
                           </Grid.Row>
                           <Grid.Row>
                             <div class="field">
-                              <label for="form-textarea-control-opinion">Message</label>
                               <textarea id="form-textarea-control-opinion" placeholder="Message" rows="12"></textarea>
                             </div>
                           </Grid.Row>
