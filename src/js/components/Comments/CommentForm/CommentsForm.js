@@ -1,27 +1,30 @@
 import React, { Component } from 'react'
 import { Menu } from 'semantic-ui-react'
 import { Link } from "react-router-dom";
-import Logo from "../../../static/logo.jpg";
+//import Logo from "../../../static/logo.jpg";
 import ClassNames from "classnames";
 import { Grid, Segment, Card, Comments} from 'semantic-ui-react'
 import {observer} from 'mobx-react'
-import CommentsStore from '../../stores/CommentsStore'
+import CommentsStore from '../../../stores/CommentsStore'
 
 import "./styles.scss"
 
 @observer
-export default class CommentsFunction extends Component {
+export default class CommentsForm extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    console.log("CF", this.props.pid);
   }
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+  addANewComment(){
+    let pid = this.props.pid
+    CommentsStore.addNewComment(pid, this.props.renderTrigger)
+  }
 
   render() {
     let {commentsForm} = CommentsStore
-    let pid = 0
-
+    //const PID = this.props.pid
     return (
       <div class="ui">
         <form class="ui form">
@@ -39,7 +42,7 @@ export default class CommentsFunction extends Component {
               <div class="field">
                 <textarea type="text" placeholder="Your comment here" value={commentsForm.comment} onChange={e => {commentsForm.comment = e.target.value; console.log(commentsForm.comment)}}></textarea>
               </div>
-              <button className="ui red inverted submit button" onClick={(e)=>{CommentsStore.addNewComment(pid); return false}}>
+              <button className="ui red inverted submit button" onClick={this.addANewComment.bind(this)}>
                 Add Comment
               </button>
               </Grid.Row>

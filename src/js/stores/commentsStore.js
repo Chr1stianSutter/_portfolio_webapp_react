@@ -10,6 +10,7 @@ class CommentsStore {
   @observable errorMsg = ''
 
   @action fetchComments(pid, cb) {
+    console.log("fetching commnets");
     return fetch('http://localhost:3000/comments/' + pid, {
       method: 'GET',
       headers: {
@@ -18,13 +19,11 @@ class CommentsStore {
       }
     }).then(response => {
       if(response.status >= 200 && response.status < 300) {
-        response.json().then(jsonResponse => {
-          console.log(jsonResponse);
-          this.comments = jsonResponse.comments
-          if(cb) cb();
+        response.json().then(responseJSON => {
+          this.comments = responseJSON.comments
+          if(cb) cb()
         }).catch(err => {
-          this.errorMsg = "Error interpreting JSON"
-          console.error("Failed to interpret JSON\n", response)
+          console.error("Error interpreting JSON from server in Comments Store\n", err);
         })
       }else{
         this.errorMsg = "Server error, see log"
@@ -38,7 +37,8 @@ class CommentsStore {
     )
   }
 
-  @action addNewComment(_pid) {
+  @action addNewComment(_pid, cb) {
+    console.log("CS:", _pid);
     return fetch('http://localhost:3000/comments/' + _pid, {
       method: 'POST',
       headers: {
@@ -55,12 +55,12 @@ class CommentsStore {
     }).then(response => {
       if (response.status >= 200 && response.status < 300) {
         console.log("comment saved");
-
-        this.fetchComments(_pid)
+        console.log(this._pid);
       } else {
         this.errorMsg = "Server error, see log"
         console.error("Server responded with ERROR: " + response.status)
       }
+      if(cb) cb()
     }).catch(
       error => {
         this.errorMsg = "No internet connection detected"

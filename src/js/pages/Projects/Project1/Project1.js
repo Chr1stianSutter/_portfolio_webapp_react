@@ -1,13 +1,23 @@
 import React from "react";
-import { Grid, Segment, Card} from 'semantic-ui-react'
+import { Grid, Segment, Card, Comment, Checkbox} from 'semantic-ui-react'
 import image from '../../../../static/image.jpg';
 
 import ShadowText from "../../../components/ShadowText/ShadowText"
 import "./style.scss"
 import ContentImage from "../../../components/ContentImage/ContentImage"
-import CommentsFunction from "../../../components/CommentFunction/CommentsFunction"
+import CommentsContainer from "../../../components/Comments/CommentsContainer.js"
+import CommentsForm from "../../../components/Comments/CommentForm/CommentsForm"
+
+//import CommentBlueprint from "../../../components/CommentBlueprint/CommentBlueprint"
 
 export default class Project1 extends React.Component {
+  constructor(props){
+    super(props)
+
+    this.PID = 0
+  }
+
+
   render() {
     return(
       <div>
@@ -164,23 +174,8 @@ export default class Project1 extends React.Component {
           </Grid.Column>
           <Grid.Column width ={2}></Grid.Column>
         </Grid>
-
-        <Grid>
-         <Grid.Column width={16}>
-          <div class="ui divider"></div>
-         </Grid.Column>
-        </Grid>
-
-        <Grid columns="equal">
-        <Grid.Column width ={5}></Grid.Column>
-          <Grid.Column width ={6}>
-
-            <CommentsFunction></CommentsFunction>
-
-          </Grid.Column>
-          <Grid.Column width ={5}></Grid.Column>
-        </Grid>
+        <CommentsContainer pid={this.PID} />
       </div>
-    );
+    )
   }
 }

@@ -1,0 +1,10 @@
+.__commentsContainer {
+  .checkBoxContainer {
+    text-align: center;
+    padding: 15px 0 15px 0;
+    $semanticBorder: solid 1px rgba(34, 36, 38, 0.14902);
+    border-bottom: $semanticBorder;
+    border-top: $semanticBorder;
+    margin: 25px 0 15px 0;
+  }
+}
