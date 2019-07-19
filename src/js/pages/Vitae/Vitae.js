@@ -10,7 +10,7 @@ import "./style.scss"
 
 export default class CV extends React.Component {
 
-  handleClick = () => window.open('../../../static/cv.pdf')
+  handleClick = () => window.open('http://localhost:3000/cvPdf')
 
   render() {
     return (
@@ -43,8 +43,10 @@ export default class CV extends React.Component {
                   {"Here you go:"}
                 </h2>
                 <div>
-                  <button class="ui inverted red button" onClick={this.handleClick} target='_blank' download="christian_sutter_curriculum_vitae">Download Curriculum Vitae</button>
-                  {/*<a  target='_blank' href='../../../static/cv.pdf' > test</a >*/}
+                <Button class="ui inverted red button" onClick={this.handleClick}>
+                {"Curriculum Vitae (PDF)"}
+                  {/*<a target='_blank' href='http://localhost:3000/cvPdf' className="link" >{"Curriculum Vitae (PDF)"}</a>*/}
+                </Button>
                 </div>
               </div>
             </Grid.Column>
