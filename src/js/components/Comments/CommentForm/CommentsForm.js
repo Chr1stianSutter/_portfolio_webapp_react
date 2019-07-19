@@ -20,6 +20,13 @@ export default class CommentsForm extends Component {
   addANewComment(){
     let pid = this.props.pid
     CommentsStore.addNewComment(pid, this.props.renderTrigger)
+    this.clearFields()
+  }
+
+  clearFields() {
+   document.getElementById("textfield1").value = "";
+   document.getElementById("textfield2").value = "";
+   document.getElementById("textfield3").value = "";
   }
 
   render() {
@@ -33,14 +40,14 @@ export default class CommentsForm extends Component {
               <Grid.Row>
               <div class="equal width fields">
                 <div class="field">
-                  <div class="ui fluid input"><input type="text" placeholder="First name" value={commentsForm.name} onChange={e => {commentsForm.name = e.target.value; console.log(commentsForm.name)}} /></div>
+                  <div id="textfield1" class="ui fluid input"><input type="text" placeholder="First name" value={commentsForm.name} onChange={e => {commentsForm.name = e.target.value; console.log(commentsForm.name)}} /></div>
                 </div>
                 <div class="field">
-                  <div class="ui fluid input"><input type="text" placeholder="Email adress" value={commentsForm.email} onChange={e => {commentsForm.email = e.target.value; console.log(commentsForm.email)}}/></div>
+                  <div id="textfield2" class="ui fluid input"><input type="text" placeholder="Email adress" value={commentsForm.email} onChange={e => {commentsForm.email = e.target.value; console.log(commentsForm.email)}}/></div>
                 </div>
               </div>
               <div class="field">
-                <textarea type="text" placeholder="Your comment here" value={commentsForm.comment} onChange={e => {commentsForm.comment = e.target.value; console.log(commentsForm.comment)}}></textarea>
+                <textarea id="textfield3" type="text" placeholder="Your comment here" value={commentsForm.comment} onChange={e => {commentsForm.comment = e.target.value; console.log(commentsForm.comment)}}></textarea>
               </div>
               <button className="ui red inverted submit button" onClick={this.addANewComment.bind(this)}>
                 Add Comment

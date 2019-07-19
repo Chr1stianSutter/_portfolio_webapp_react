@@ -1,6 +1,7 @@
 import React from 'react'
 import ClassNames from "classnames";
 import {Grid, Segment, Card, Comment} from 'semantic-ui-react'
+import image from '../../../../static/avatar1.png';
 
 import "./styles.scss"
 
@@ -14,7 +15,7 @@ export default class CommentComponent extends React.Component {
     console.log(this.props.commentData);
     return (
       <Comment>
-       <Comment.Avatar src='/images/avatar/small/matt.jpg' />
+       <Comment.Avatar src={image} />
        <Comment.Content>
          <Comment.Author>{this.props.commentData.name || "Anonymous Comment"}</Comment.Author>
          <Comment.Metadata>

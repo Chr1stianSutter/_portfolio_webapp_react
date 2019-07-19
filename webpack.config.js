@@ -34,14 +34,33 @@ module.exports = {
                 loaders: ['style-loader', 'css-loader', 'less-loader']
             },
             {
-                test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
+                test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|pdf|ttf|woff|woff2)(\?.*)?$/,
+                {/*exclude: /static/cv\.pdf$/,*/}
                 loader: 'file-loader?name=/res/[name].[ext]',
                 query: {
                     name: '[path][name].[ext]?[hash:8]'
                 }
             },
+            { test: /\.(jpg|png|gif|svg|pdf)$/,
+              use:
+              [
+                { loader: 'file-loader',
+                  options: {
+                    name: '[name].[ext]', outputPath: './static/'
+                  }
+                }
+              ]
+            },
             {
-                test: /\.(mp4|webm|wav|mp3|m4a|aac|oga)(\?.*)?$/,
+              test: /\.(pdf)$/,
+              {/*exclude: /static/,*/}
+              loader: 'file-loader',
+              query: {
+                name: '[name].[ext]'
+              }
+            },
+            {
+                test: /\.(mp4|webm|wav|mp3|m4a|aac|oga|pdf)(\?.*)?$/,
                 loader: 'url-loader',
                 query: {
                     name: '[path][name].[ext]?[hash:8]',

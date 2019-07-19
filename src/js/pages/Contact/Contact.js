@@ -6,7 +6,7 @@ import "./style.scss"
 
 const FormExampleInverted = () => (
   <Segment inverted>
-    <Form inverted>
+    <form htmlAction="mailto:sutter.christian95@gmail.com">
       <Form.Group widths='equal'>
         <Form.Input fluid label='First name' placeholder='First name' />
         <Form.Input fluid label='Email adress' placeholder='Email adress' />
@@ -17,12 +17,26 @@ const FormExampleInverted = () => (
       placeholder='Message'
     />
       </Form.Group>
-      <Button type='submit'>Submit</Button>
-    </Form>
+      <input type='submit' value="Senden!" />
+    </form>
   </Segment>
 )
 
 export default class Contact extends React.Component {
+
+  handleClick = () => {
+    //var body_message = document.getElementById("form-textarea-control-opinion").value;
+    var body_message = ''
+    var email = 'sutter.christian95@gmail.com'
+    var subject = 'Contact via portfolio-form';
+    console.log(body_message);
+
+    var mailto_link = 'mailto:' + email + '?subject=' + subject + '&body=' + body_message;
+
+    window.open("mailto:sutter.christian95@gmail.com")
+    //window.open("mailto:sutter.christian95@gmail.com")
+  }
+
   render() {
     return (
       <div className="page light">
@@ -42,32 +56,50 @@ export default class Contact extends React.Component {
                 </div>
               </Grid.Row>
               <Grid.Row>
+                <Grid.Column width={6}>
+                  <div >
+                    <h2>
+                      {"Contact me @"}
+                    </h2>
+                    <h2>
+                      {"sutter.christian95@gmail.com"}
+                    </h2>
+                  </div>
+                </Grid.Column>
+              </Grid.Row>
+              <Grid.Row>
                 <Grid.Column width={12}>
                   <div class="ui">
                     <form class="ui form">
-                      <Grid columns="equal">
-                        <Grid.Column>
-                          <Grid.Row>
-                            <div class="equal width fields">
-                              <div class="field">
-                                <div class="ui fluid input"><input type="text" placeholder="First name" /></div>
+                      {/*
+                        <Grid columns="equal">
+                          <Grid.Column>
+
+                            <Grid.Row>
+                              <div class="equal width fields">
+
+                                <div class="field">
+                                  <div class="ui fluid input"><input type="text" placeholder="First name" /></div>
+                                </div>
+
+                                <div class="field">
+                                  <div class="ui fluid input"><input type="text" placeholder="Email adress" /></div>
+                                </div>
+
                               </div>
+                            </Grid.Row>
+                            <Grid.Row>
                               <div class="field">
-                                <div class="ui fluid input"><input type="text" placeholder="Email adress" /></div>
+                                <textarea id="form-textarea-control-opinion" placeholder="Message" rows="12"></textarea>
                               </div>
-                            </div>
-                          </Grid.Row>
-                          <Grid.Row>
-                            <div class="field">
-                              <textarea id="form-textarea-control-opinion" placeholder="Message" rows="12"></textarea>
-                            </div>
-                          </Grid.Row>
-                        </Grid.Column>
-                      </Grid>
+                            </Grid.Row>
+                          </Grid.Column>
+                        </Grid>
+                      */}
                       <Grid>
                         <Grid.Column>
                           <Grid.Row>
-                            <button type="submit" class="ui inverted red button">Submit</button>
+                            <button onClick={this.handleClick} class="ui inverted red button">Contact</button>
                           </Grid.Row>
                         </Grid.Column>
                       </Grid>

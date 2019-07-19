@@ -1,5 +1,8 @@
 import React from "react";
 import { Grid , Button} from 'semantic-ui-react'
+import PDFfile from '../../../static/cv.pdf';
+//import PDFfile from '../../../static/avatar1.png';
+
 
 import "./style.scss"
 
@@ -26,7 +29,7 @@ export default class CV extends React.Component {
               </div>
             </Grid.Row>
           <Grid.Row>
-            <Grid.Column width={5}>
+            <Grid.Column width={6}>
               <div >
                 <h2>
                   {"Want to download my CV?"}
@@ -35,7 +38,7 @@ export default class CV extends React.Component {
                   {"Here you go:"}
                 </h2>
                 <div>
-                  <button class="ui inverted red button">Download Curriculum Vitae</button>
+                  <button class="ui inverted red button" href={PDFfile} target='_blank' download="christian_sutter_curriculum_vitae">Download Curriculum Vitae</button>
                 </div>
               </div>
             </Grid.Column>

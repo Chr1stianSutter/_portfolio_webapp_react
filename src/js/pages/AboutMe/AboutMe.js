@@ -4,6 +4,9 @@ import { Grid, Button } from 'semantic-ui-react'
 import "./style.scss"
 
 export default class AboutMe extends React.Component {
+
+  handleClick = () => parent.open('https://dmd.hs-weingarten.de/')
+
   render() {
     return (
       <div className="page dark">
@@ -34,7 +37,7 @@ export default class AboutMe extends React.Component {
                     {"out here:"}
                   </h2>
                   <div>
-                    <button class="ui inverted red button">digitalmediadesign.io</button>
+                    <button class="ui inverted red button"  onClick={this.handleClick} >digitalmediadesign.io</button>
                   </div>
                 </div>
               </Grid.Column>

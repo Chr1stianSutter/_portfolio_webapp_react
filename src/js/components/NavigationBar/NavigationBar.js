@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Menu } from 'semantic-ui-react'
 import { Link } from "react-router-dom";
-import Logo from "../../../static/logo.jpg";
+import Logo from "../../../static/logo-cs6-02.png";
 import ClassNames from "classnames";
 import { Grid, Segment, Card} from 'semantic-ui-react'
 
