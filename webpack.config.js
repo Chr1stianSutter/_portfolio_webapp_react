@@ -33,6 +33,10 @@ module.exports = {
                 test: /\.less$/,
                 loaders: ['style-loader', 'css-loader', 'less-loader']
             },
+
+
+
+
             {
                 test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|pdf|ttf|woff|woff2)(\?.*)?$/,
                 {/*exclude: /static/cv\.pdf$/,*/}
@@ -56,7 +60,14 @@ module.exports = {
               {/*exclude: /static/,*/}
               loader: 'file-loader',
               query: {
-                name: '[name].[ext]'
+                name: './static/[name].[hash:7].[ext]'
+              }
+            },
+            {
+              test: /\.(pdf)(\?.*)?$/,
+              loader: 'url-loader',
+              options: {
+                name: utils.assetsPath('[name].[hash:7].[ext]')
               }
             },
             {
@@ -67,6 +78,10 @@ module.exports = {
                     limit: 10000
                 }
             },
+
+
+
+            
             {
                 test: /\.html$/,
                 loader: 'html-loader'

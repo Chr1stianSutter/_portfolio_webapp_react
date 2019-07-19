@@ -1,12 +1,17 @@
 import React from "react";
 import { Grid , Button} from 'semantic-ui-react'
-import PDFfile from '../../../static/cv.pdf';
+//import PDFfile from '../../../static/cv.pdf';
 //import PDFfile from '../../../static/avatar1.png';
+//import PDFfile from '../../../../assets/cv.pdf';
+
 
 
 import "./style.scss"
 
 export default class CV extends React.Component {
+
+  handleClick = () => window.open('../../../static/cv.pdf')
+
   render() {
     return (
       <div className="page dark">
@@ -38,7 +43,8 @@ export default class CV extends React.Component {
                   {"Here you go:"}
                 </h2>
                 <div>
-                  <button class="ui inverted red button" href={PDFfile} target='_blank' download="christian_sutter_curriculum_vitae">Download Curriculum Vitae</button>
+                  <button class="ui inverted red button" onClick={this.handleClick} target='_blank' download="christian_sutter_curriculum_vitae">Download Curriculum Vitae</button>
+                  {/*<a  target='_blank' href='../../../static/cv.pdf' > test</a >*/}
                 </div>
               </div>
             </Grid.Column>
