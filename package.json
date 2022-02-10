@@ -63,7 +63,7 @@
     "jest": "^22.4.4",
     "less": "^2.7.3",
     "less-loader": "^4.1.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "raw-loader": "^0.5.1",
     "react-test-renderer": "^16.8.6",
     "redux-logger": "^2.6.1",
